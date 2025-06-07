@@ -127,8 +127,13 @@
     transition: 0.2s;
     transform: scale(105%);
   }
+
+ .technologie:hover {
+   transition: 0.2s;
+   transform: scale(105%);
+ }
   
-  .card:not(:hover), .social:not(:hover) {
+  .card:not(:hover), .social:not(:hover), .technologie:not(:hover) {
     transition: 0.2s;
     transform: scale(100%);
   }
@@ -144,8 +149,13 @@
     transition: 0.2s;
     transform: scale(105%);
   }
-
-  .card:not(:active), .social:not(:active) {
+  
+  .technologie:active {
+    transition: 0.2s;
+    transform: scale(105%);
+  }
+  
+  .card:not(:active), .social:not(:active), .technologie:not(:active) {
     transition: 0.2s;
     transform: scale(100%);
   }

@@ -4,6 +4,7 @@ import github from "./assets/socials/github.svg"
 import discord from "./assets/socials/discord.svg"
 import x from "./assets/socials/x.svg"
 import twitch from "./assets/socials/twitch.svg"
+import telegram from "./assets/socials/telegram.svg"
 import youtube from "./assets/socials/youtube.svg"
 
 import csharp from "./assets/tecnologies/c-sharp.svg"
@@ -13,8 +14,10 @@ import java from "./assets/tecnologies/java.svg"
 import js from "./assets/tecnologies/js.svg"
 import kotlin from "./assets/tecnologies/kotlin.svg"
 import spring from "./assets/tecnologies/spring.svg"
+import {calculateAge, convert} from "./utils/numberUtils.ts";
 
 function App() {
+  const age = calculateAge(7,6,2007)
   return (
     <>
       <main className={"main"}>
@@ -28,7 +31,7 @@ function App() {
                 <tbody>
                 <tr>
                   <td className={"table-ceil"}>
-                    <h3 className={"table-header"}>Pronouns:</h3>
+                    <h3 className={"table-header"}>Nicknames:</h3>
                   </td>
                   <td className={"table-ceil"}>
                     <a>kiNgchev, Hisoka Morrow</a>
@@ -39,7 +42,14 @@ function App() {
                     <h3 className={"table-header"}>Age:</h3>
                   </td>
                   <td className={"table-ceil"}>
-                    <a>Seventeen, 17</a>
+                    <a>{
+                      convert(age).toString()
+                      .split(' ')
+                      .map(function(word) {
+                        return word[0].toUpperCase() + word.substring(1);
+                      })
+                      .join(' ')
+                    }, {age}</a>
                   </td>
                 </tr>
                 <tr>
@@ -69,6 +79,9 @@ function App() {
               <a target={"_blank"} href={"https://www.twitch.tv/k1ngchev"}>
                 <img src={twitch} alt={"kingchev twitch"} className={"social"}/>
               </a>
+              <a target={"_blank"} href={"https://t.me/k1ngchev"}>
+                <img src={telegram} alt={"kingchev telegram channel"} className={"social"}/>
+              </a>
               <a target={"_blank"} href={"https://www.youtube.com/@_k1ngchev"}>
                 <img src={youtube} alt={"kingchev youtube"} className={"social"}/>
               </a>
@@ -83,13 +96,13 @@ function App() {
           <div className={"card"}>
             <h2>What have i mastered?</h2>
             <div className={"technologies"}>
-              <img className={"technologie"} src={csharp}/>
-              <img className={"technologie"} src={docker}/>
-              <img className={"technologie"} src={git}/>
-              <img className={"technologie"} src={java}/>
-              <img className={"technologie"} src={js}/>
-              <img className={"technologie"} src={kotlin}/>
-              <img className={"technologie"} src={spring}/>
+              <img alt={"kiNgchev"} className={"technologie"} src={csharp}/>
+              <img alt={"kiNgchev"} className={"technologie"} src={docker}/>
+              <img alt={"kiNgchev"} className={"technologie"} src={git}/>
+              <img alt={"kiNgchev"} className={"technologie"} src={java}/>
+              <img alt={"kiNgchev"} className={"technologie"} src={js}/>
+              <img alt={"kiNgchev"} className={"technologie"} src={kotlin}/>
+              <img alt={"kiNgchev"} className={"technologie"} src={spring}/>
             </div>
           </div>
         </section>

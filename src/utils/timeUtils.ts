@@ -45,7 +45,7 @@ export function calculateAge(date: number, month: number, year: number) {
   const dob = new Date(year, month - 1, date);
   const dobnow = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
   let age;
-
+  
   age = today.getFullYear() - dob.getFullYear();
   if (today < dobnow) {
     age = age - 1;

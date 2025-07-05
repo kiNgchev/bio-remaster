@@ -3,7 +3,7 @@
 </template>
 
 <style lang="postcss" scoped>
-@import "@style/_variables.pcss";
+@import "@style/_variables.scss";
 
 .avatar {
   width: 200px;

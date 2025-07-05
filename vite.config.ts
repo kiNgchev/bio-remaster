@@ -10,7 +10,6 @@ export default defineConfig({
     tailwindcss(),
   ],
   css: {
-    postcss: "./postcss.config.ts"
   },
   resolve: {
     alias: {

@@ -9,7 +9,7 @@
 </template>
 
 <style lang="postcss" scoped>
-@import "@style/_variables.pcss";
+@import "@style/_variables.scss";
 
 .card {
   display: flex;

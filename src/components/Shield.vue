@@ -10,7 +10,7 @@ defineProps<{ src: string, label: string, url: string }>();
 </template>
 
 <style lang="postcss" scoped>
-@import "@style/_variables.pcss";
+@import "@style/_variables.scss";
 
 .shield {
   padding: 5px;

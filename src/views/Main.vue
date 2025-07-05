@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </template>
 
 <style lang="postcss" scoped>
-@import "@style/_animations.pcss";
-@import "@style/_variables.pcss";
+@import "@style/_animations.scss";
+@import "@style/_variables.scss";
 
 .type {
   font-family: monospace;

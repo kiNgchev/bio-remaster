@@ -1,5 +1,5 @@
-@import "variables";
-@import "fonts";
+@use "variables";
+@use "fonts";
 
 :root {
   font-family: "JetBrains Mono", sans-serif;
@@ -8,7 +8,7 @@
   
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: $secondary-bg-color;
+  background: variables.$secondary-bg-color;
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,7 +22,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: $secondary-bg-color;
+  background: variables.$secondary-bg-color;
   
   -webkit-user-drag: none;
   user-select: none;

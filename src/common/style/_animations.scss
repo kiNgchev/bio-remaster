@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 @keyframes blinking {
   50% { opacity: 0; }
@@ -6,34 +6,34 @@
 
 @media (hover: hover) {
   .card:hover {
-    transition: $scaling-time;
-    transform: scale($scaling-percent-2);
+    transition: variables.$scaling-time;
+    transform: scale(variables.$scaling-percent-2);
   }
   
   .social:hover, .shield:hover {
-    transition: $scaling-time;
-    transform: scale($scaling-percent-1);
+    transition: variables.$scaling-time;
+    transform: scale(variables.$scaling-percent-1);
   }
   
   .card:not(:hover), .social:not(:hover), .shield:not(:hover) {
-    transition: $scaling-time;
+    transition: variables.$scaling-time;
     transform: scale(100%);
   }
 }
 
 @media (hover: none) {
   .card:active {
-    transition: $scaling-time;
-    transform: scale($scaling-percent-2);
+    transition: variables.$scaling-time;
+    transform: scale(variables.$scaling-percent-2);
   }
   
   .social:active, .shield:active {
-    transition: $scaling-time;
-    transform: scale($scaling-percent-1);
+    transition: variables.$scaling-time;
+    transform: scale(variables.$scaling-percent-1);
   }
   
   .card:not(:active), .social:not(:active), .shield:not(:active) {
-    transition: $scaling-time;
+    transition: variables.$scaling-time;
     transform: scale(100%);
   }
 }

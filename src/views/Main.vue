@@ -130,9 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
   </main>
 </template>
 
-<style lang="postcss" scoped>
-@import "@style/_animations.scss";
-@import "@style/_variables.scss";
+<style lang="scss" scoped>
+@use "@style/_animations.scss";
+@use "@style/_variables.scss";
 
 .type {
   font-family: monospace;
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 .typed-cursor {
   font-size: 1rem;
-  color: $text-secondary-color;
+  color: variables.$text-secondary-color;
   animation: blinking 0.7s infinite steps(1);
 }
 </style>

@@ -9,13 +9,13 @@ defineProps<{ src: string, label: string, url: string }>();
   </a>
 </template>
 
-<style lang="postcss" scoped>
-@import "@style/_variables.scss";
+<style lang="scss" scoped>
+@use "@style/_variables.scss";
 
 .shield {
   padding: 5px;
   border-radius: 5px;
-  background-color: $primary-color;
+  background-color: variables.$primary-color;
 }
 
 .shield-logo {

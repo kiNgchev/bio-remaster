@@ -110,20 +110,46 @@ document.addEventListener('DOMContentLoaded', () => {
       <card>
         <h2>What have I mastered?</h2>
         <div class="technologies">
-          <shield src="src/assets/technologies/kotlin.svg" label="Kotlin" url="https://kotlinlang.org/"/>
-          <shield src="src/assets/technologies/go.svg" label="Go" url="https://go.dev/"/>
-          <shield src="src/assets/technologies/rust.svg" label="Rust" url="https://www.rust-lang.org/"/>
-          <shield src="src/assets/technologies/gradle.svg" label="Gradle" url="https://gradle.org/"/>
-          <shield src="src/assets/technologies/spring.svg" label="Spring" url="https://spring.io/"/>
-          <shield src="src/assets/technologies/java.svg" label="Java" url="https://www.java.com/"/>
-          <shield src="src/assets/technologies/groovy.svg" label="Groovy" url="https://www.groovy-lang.org/"/>
-          <shield src="src/assets/technologies/scala.svg" label="Scala" url="https://scala-lang.org/"/>
-          <shield src="src/assets/technologies/c-sharp.svg" label="C#" url="https://dotnet.microsoft.com/en-us/languages/csharp"/>
-          <shield src="src/assets/technologies/js.svg" label="JavaScript" url="https://nodejs.org/"/>
-          <shield src="src/assets/technologies/ts.svg" label="TypeScript" url="https://www.typescriptlang.org/"/>
-          <shield src="src/assets/technologies/vue.svg" label="Vue" url="https://vuejs.org/"/>
-          <shield src="src/assets/technologies/docker.svg" label="Docker" url="https://www.docker.com/"/>
-          <shield src="src/assets/technologies/git.svg" label="Git" url="https://git-scm.com/"/>
+          <shield  label="Kotlin" url="https://kotlinlang.org/">
+            <img class="shield-logo m-auto" src="@assets/technologies/kotlin.svg">
+          </shield>
+          <shield  label="Go" url="https://go.dev/">
+            <img class="shield-logo m-auto" src="@assets/technologies/go.svg">
+          </shield>
+          <shield  label="Rust" url="https://www.rust-lang.org/">
+            <img class="shield-logo m-auto" src="@assets/technologies/rust.svg">
+          </shield>
+          <shield  label="Gradle" url="https://gradle.org/">
+            <img class="shield-logo m-auto" src="@assets/technologies/gradle.svg">
+          </shield>
+          <shield  label="Spring" url="https://spring.io/">
+            <img class="shield-logo m-auto" src="@assets/technologies/spring.svg">
+          </shield>
+          <shield  label="Java" url="https://www.java.com/">
+            <img class="shield-logo m-auto" src="@assets/technologies/java.svg">
+          </shield>
+          <shield  label="Groovy" url="https://www.groovy-lang.org/">
+            <img class="shield-logo m-auto" src="@assets/technologies/groovy.svg">
+          </shield>
+          <shield  label="Scala" url="https://scala-lang.org/">
+            <img class="shield-logo m-auto" src="@assets/technologies/scala.svg">
+          </shield>
+          <shield  label="C#" url="https://dotnet.microsoft.com/en-us/languages/csharp">
+            <img class="shield-logo m-auto" src="@assets/technologies/c-sharp.svg"></shield>
+          <shield  label="JavaScript" url="https://nodejs.org/">
+            <img class="shield-logo m-auto" src="@assets/technologies/js.svg">
+          </shield>
+          <shield  label="TypeScript" url="https://www.typescriptlang.org/">
+            <img class="shield-logo m-auto" src="@assets/technologies/ts.svg">
+          </shield>
+          <shield  label="Vue" url="https://vuejs.org/">
+            <img class="shield-logo m-auto" src="@assets/technologies/vue.svg"></shield>
+          <shield  label="Docker" url="https://www.docker.com/">
+            <img class="shield-logo m-auto" src="@assets/technologies/docker.svg">
+          </shield>
+          <shield  label="Git" url="https://git-scm.com/">
+            <img class="shield-logo m-auto" src="@assets/technologies/git.svg">
+          </shield>
         </div>
       </card>
     </section>
@@ -143,5 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
   font-size: 1rem;
   color: variables.$text-secondary-color;
   animation: blinking 0.7s infinite steps(1);
+}
+
+.shield-logo {
+  width: 30px;
+  height: 30px;
 }
 </style>

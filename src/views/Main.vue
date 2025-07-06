@@ -6,6 +6,30 @@ import Card from "../components/Card.vue";
 import Shield from "../components/Shield.vue";
 import Typed from "typed.js";
 
+// socials
+import githubSvg from "@assets/socials/github.svg?url"
+import discordSvg from "@assets/socials/discord.svg?url"
+import xSvg from "@assets/socials/x.svg?url"
+import twitchSvg from "@assets/socials/twitch.svg?url"
+import telegramSvg from "@assets/socials/telegram.svg?url"
+import youtubeSvg from "@assets/socials/youtube.svg?url"
+
+// techs
+import kotlinSvg from "@assets/technologies/kotlin.svg?url";
+import goSvg from "@assets/technologies/go.svg?url";
+import rustSvg from "@assets/technologies/rust.svg?url";
+import gradleSvg from "@assets/technologies/gradle.svg?url";
+import springSvg from "@assets/technologies/spring.svg?url";
+import javaSvg from "@assets/technologies/java.svg?url";
+import groovySvg from "@assets/technologies/groovy.svg?url";
+import scalaSvg from "@assets/technologies/scala.svg?url";
+import csharpSvg from "@assets/technologies/c-sharp.svg?url";
+import jsSvg from "@assets/technologies/js.svg?url";
+import tsSvg from "@assets/technologies/ts.svg?url";
+import vueSvg from "@assets/technologies/vue.svg?url";
+import dockerSvg from "@assets/technologies/docker.svg?url";
+import gitSvg from "@assets/technologies/git.svg?url";
+
 const age = calculateAge(7,6,2007)
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -80,22 +104,22 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2>Socials</h2>
         <div class="socials">
           <a target="_blank" href="https://github.com/kiNgchev">
-            <img src="@assets/socials/github.svg" alt="kingchev github" class="social"/>
+            <img :src="githubSvg" alt="kingchev github" class="social"/>
           </a>
           <a target="_blank" href="https://discord.com/users/743878110747033691">
-            <img src="@assets/socials/discord.svg" alt="kingchev discord" class="social"/>
+            <img :src="discordSvg" alt="kingchev discord" class="social"/>
           </a>
           <a target="_blank" href="https://x.com/TheKiNgchev?t=XMZWxPmnL9kAAum9iMfBEQ&s=09">
-            <img src="@assets/socials/x.svg" alt="kingchev x" class="social"/>
+            <img :src="xSvg" alt="kingchev x" class="social"/>
           </a>
           <a target="_blank" href="https://www.twitch.tv/k1ngchev">
-            <img src="@assets/socials/twitch.svg" alt="kingchev twitch" class="social"/>
+            <img :src="twitchSvg" alt="kingchev twitch" class="social"/>
           </a>
           <a target="_blank" href="https://t.me/k1ngchev">
-            <img src="@assets/socials/telegram.svg" alt="kingchev telegram channel" class="social"/>
+            <img :src="telegramSvg" alt="kingchev telegram channel" class="social"/>
           </a>
           <a target="_blank" href="https://www.youtube.com/@_k1ngchev">
-            <img src="@assets/socials/youtube.svg" alt="kingchev youtube" class="social"/>
+            <img :src="youtubeSvg" alt="kingchev youtube" class="social"/>
           </a>
         </div>
       </card>
@@ -110,46 +134,20 @@ document.addEventListener('DOMContentLoaded', () => {
       <card>
         <h2>What have I mastered?</h2>
         <div class="technologies">
-          <shield  label="Kotlin" url="https://kotlinlang.org/">
-            <img class="shield-logo m-auto" src="@assets/technologies/kotlin.svg">
-          </shield>
-          <shield  label="Go" url="https://go.dev/">
-            <img class="shield-logo m-auto" src="@assets/technologies/go.svg">
-          </shield>
-          <shield  label="Rust" url="https://www.rust-lang.org/">
-            <img class="shield-logo m-auto" src="@assets/technologies/rust.svg">
-          </shield>
-          <shield  label="Gradle" url="https://gradle.org/">
-            <img class="shield-logo m-auto" src="@assets/technologies/gradle.svg">
-          </shield>
-          <shield  label="Spring" url="https://spring.io/">
-            <img class="shield-logo m-auto" src="@assets/technologies/spring.svg">
-          </shield>
-          <shield  label="Java" url="https://www.java.com/">
-            <img class="shield-logo m-auto" src="@assets/technologies/java.svg">
-          </shield>
-          <shield  label="Groovy" url="https://www.groovy-lang.org/">
-            <img class="shield-logo m-auto" src="@assets/technologies/groovy.svg">
-          </shield>
-          <shield  label="Scala" url="https://scala-lang.org/">
-            <img class="shield-logo m-auto" src="@assets/technologies/scala.svg">
-          </shield>
-          <shield  label="C#" url="https://dotnet.microsoft.com/en-us/languages/csharp">
-            <img class="shield-logo m-auto" src="@assets/technologies/c-sharp.svg"></shield>
-          <shield  label="JavaScript" url="https://nodejs.org/">
-            <img class="shield-logo m-auto" src="@assets/technologies/js.svg">
-          </shield>
-          <shield  label="TypeScript" url="https://www.typescriptlang.org/">
-            <img class="shield-logo m-auto" src="@assets/technologies/ts.svg">
-          </shield>
-          <shield  label="Vue" url="https://vuejs.org/">
-            <img class="shield-logo m-auto" src="@assets/technologies/vue.svg"></shield>
-          <shield  label="Docker" url="https://www.docker.com/">
-            <img class="shield-logo m-auto" src="@assets/technologies/docker.svg">
-          </shield>
-          <shield  label="Git" url="https://git-scm.com/">
-            <img class="shield-logo m-auto" src="@assets/technologies/git.svg">
-          </shield>
+          <shield :source="kotlinSvg" label="Kotlin" url="https://kotlinlang.org/"/>
+          <shield :source="goSvg" label="Go" url="https://go.dev/"/>
+          <shield :source="rustSvg" label="Rust" url="https://www.rust-lang.org/"/>
+          <shield :source="gradleSvg" label="Gradle" url="https://gradle.org/"/>
+          <shield :source="springSvg" label="Spring" url="https://spring.io/"/>
+          <shield :source="javaSvg" label="Java" url="https://www.java.com/"/>
+          <shield :source="groovySvg" label="Groovy" url="https://www.groovy-lang.org/"/>
+          <shield :source="scalaSvg" label="Scala" url="https://scala-lang.org/"/>
+          <shield :source="csharpSvg" label="C#" url="https://dotnet.microsoft.com/en-us/languages/csharp"/>
+          <shield :source="jsSvg" label="JavaScript" url="https://nodejs.org/"/>
+          <shield :source="tsSvg" label="TypeScript" url="https://www.typescriptlang.org/"/>
+          <shield :source="vueSvg" label="Vue" url="https://vuejs.org/"/>
+          <shield :source="dockerSvg" label="Docker" url="https://www.docker.com/"/>
+          <shield :source="gitSvg" label="Git" url="https://git-scm.com/"/>
         </div>
       </card>
     </section>

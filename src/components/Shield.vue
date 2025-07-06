@@ -1,10 +1,10 @@
 <script setup lang="ts">
-defineProps<{ label: string, url: string }>();
+defineProps<{ source: string, label: string, url: string }>();
 </script>
 
 <template>
   <a :href="url" target="_blank" class="shield flex wrap-normal justify-evenly content-center">
-    <slot />
+    <img :src="source" alt="kingchev" class="shield-logo m-auto"/>
     <p class="shield-label self-center">{{ label }}</p>
   </a>
 </template>

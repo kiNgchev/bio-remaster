@@ -2,13 +2,13 @@
   <img src="@assets/avatar.jpg" alt="kingchev avatar" class="avatar"/>
 </template>
 
-<style lang="postcss" scoped>
-@import "@style/_variables.scss";
+<style lang="scss" scoped>
+@use "@style/_variables.scss";
 
 .avatar {
   width: 200px;
   height: 200px;
-  border-radius: $border-radius;
+  border-radius: variables.$border-radius;
   border: 3px solid #7567ff;
   margin: auto;
 
@@ -18,24 +18,24 @@
 
 @media (hover: hover) {
   .avatar:hover {
-    transition: $scaling-time;
-    transform: scale($scaling-percent-2);
+    transition: variables.$scaling-time;
+    transform: scale(variables.$scaling-percent-2);
   }
 
   .avatar:not(:hover) {
-    transition: $scaling-time;
+    transition: variables.$scaling-time;
     transform: scale(100%);
   }
 }
 
 @media (hover: none) {
   .avatar:active {
-    transition: $scaling-time;
-    transform: scale($scaling-percent-2);
+    transition: variables.$scaling-time;
+    transform: scale(variables.$scaling-percent-2);
   }
 
   .avatar:not(:active) {
-    transition: $scaling-time;
+    transition: variables.$scaling-time;
     transform: scale(100%);
   }
 }

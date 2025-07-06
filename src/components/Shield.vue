@@ -1,21 +1,21 @@
 <script setup lang="ts">
-defineProps<{ src: string, label: string, url: string }>();
+defineProps<{ source: string, label: string, url: string }>();
 </script>
 
 <template>
   <a :href="url" target="_blank" class="shield flex wrap-normal justify-evenly content-center">
-    <img :src="src" alt="kingchev" class="shield-logo m-auto"/>
+    <img :src="source" alt="kingchev" class="shield-logo m-auto"/>
     <p class="shield-label self-center">{{ label }}</p>
   </a>
 </template>
 
-<style lang="postcss" scoped>
-@import "@style/_variables.scss";
+<style lang="scss" scoped>
+@use "@style/_variables.scss";
 
 .shield {
   padding: 5px;
   border-radius: 5px;
-  background-color: $primary-color;
+  background-color: variables.$primary-color;
 }
 
 .shield-logo {

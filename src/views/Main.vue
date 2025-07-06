@@ -6,6 +6,30 @@ import Card from "../components/Card.vue";
 import Shield from "../components/Shield.vue";
 import Typed from "typed.js";
 
+// socials
+import githubSvg from "@assets/socials/github.svg?url"
+import discordSvg from "@assets/socials/discord.svg?url"
+import xSvg from "@assets/socials/x.svg?url"
+import twitchSvg from "@assets/socials/twitch.svg?url"
+import telegramSvg from "@assets/socials/telegram.svg?url"
+import youtubeSvg from "@assets/socials/youtube.svg?url"
+
+// techs
+import kotlinSvg from "@assets/technologies/kotlin.svg?url";
+import goSvg from "@assets/technologies/go.svg?url";
+import rustSvg from "@assets/technologies/rust.svg?url";
+import gradleSvg from "@assets/technologies/gradle.svg?url";
+import springSvg from "@assets/technologies/spring.svg?url";
+import javaSvg from "@assets/technologies/java.svg?url";
+import groovySvg from "@assets/technologies/groovy.svg?url";
+import scalaSvg from "@assets/technologies/scala.svg?url";
+import csharpSvg from "@assets/technologies/c-sharp.svg?url";
+import jsSvg from "@assets/technologies/js.svg?url";
+import tsSvg from "@assets/technologies/ts.svg?url";
+import vueSvg from "@assets/technologies/vue.svg?url";
+import dockerSvg from "@assets/technologies/docker.svg?url";
+import gitSvg from "@assets/technologies/git.svg?url";
+
 const age = calculateAge(7,6,2007)
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -80,22 +104,22 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2>Socials</h2>
         <div class="socials">
           <a target="_blank" href="https://github.com/kiNgchev">
-            <img src="@assets/socials/github.svg" alt="kingchev github" class="social"/>
+            <img :src="githubSvg" alt="kingchev github" class="social"/>
           </a>
           <a target="_blank" href="https://discord.com/users/743878110747033691">
-            <img src="@assets/socials/discord.svg" alt="kingchev discord" class="social"/>
+            <img :src="discordSvg" alt="kingchev discord" class="social"/>
           </a>
           <a target="_blank" href="https://x.com/TheKiNgchev?t=XMZWxPmnL9kAAum9iMfBEQ&s=09">
-            <img src="@assets/socials/x.svg" alt="kingchev x" class="social"/>
+            <img :src="xSvg" alt="kingchev x" class="social"/>
           </a>
           <a target="_blank" href="https://www.twitch.tv/k1ngchev">
-            <img src="@assets/socials/twitch.svg" alt="kingchev twitch" class="social"/>
+            <img :src="twitchSvg" alt="kingchev twitch" class="social"/>
           </a>
           <a target="_blank" href="https://t.me/k1ngchev">
-            <img src="@assets/socials/telegram.svg" alt="kingchev telegram channel" class="social"/>
+            <img :src="telegramSvg" alt="kingchev telegram channel" class="social"/>
           </a>
           <a target="_blank" href="https://www.youtube.com/@_k1ngchev">
-            <img src="@assets/socials/youtube.svg" alt="kingchev youtube" class="social"/>
+            <img :src="youtubeSvg" alt="kingchev youtube" class="social"/>
           </a>
         </div>
       </card>
@@ -110,29 +134,29 @@ document.addEventListener('DOMContentLoaded', () => {
       <card>
         <h2>What have I mastered?</h2>
         <div class="technologies">
-          <shield src="src/assets/technologies/kotlin.svg" label="Kotlin" url="https://kotlinlang.org/"/>
-          <shield src="src/assets/technologies/go.svg" label="Go" url="https://go.dev/"/>
-          <shield src="src/assets/technologies/rust.svg" label="Rust" url="https://www.rust-lang.org/"/>
-          <shield src="src/assets/technologies/gradle.svg" label="Gradle" url="https://gradle.org/"/>
-          <shield src="src/assets/technologies/spring.svg" label="Spring" url="https://spring.io/"/>
-          <shield src="src/assets/technologies/java.svg" label="Java" url="https://www.java.com/"/>
-          <shield src="src/assets/technologies/groovy.svg" label="Groovy" url="https://www.groovy-lang.org/"/>
-          <shield src="src/assets/technologies/scala.svg" label="Scala" url="https://scala-lang.org/"/>
-          <shield src="src/assets/technologies/c-sharp.svg" label="C#" url="https://dotnet.microsoft.com/en-us/languages/csharp"/>
-          <shield src="src/assets/technologies/js.svg" label="JavaScript" url="https://nodejs.org/"/>
-          <shield src="src/assets/technologies/ts.svg" label="TypeScript" url="https://www.typescriptlang.org/"/>
-          <shield src="src/assets/technologies/vue.svg" label="Vue" url="https://vuejs.org/"/>
-          <shield src="src/assets/technologies/docker.svg" label="Docker" url="https://www.docker.com/"/>
-          <shield src="src/assets/technologies/git.svg" label="Git" url="https://git-scm.com/"/>
+          <shield :source="kotlinSvg" label="Kotlin" url="https://kotlinlang.org/"/>
+          <shield :source="goSvg" label="Go" url="https://go.dev/"/>
+          <shield :source="rustSvg" label="Rust" url="https://www.rust-lang.org/"/>
+          <shield :source="gradleSvg" label="Gradle" url="https://gradle.org/"/>
+          <shield :source="springSvg" label="Spring" url="https://spring.io/"/>
+          <shield :source="javaSvg" label="Java" url="https://www.java.com/"/>
+          <shield :source="groovySvg" label="Groovy" url="https://www.groovy-lang.org/"/>
+          <shield :source="scalaSvg" label="Scala" url="https://scala-lang.org/"/>
+          <shield :source="csharpSvg" label="C#" url="https://dotnet.microsoft.com/en-us/languages/csharp"/>
+          <shield :source="jsSvg" label="JavaScript" url="https://nodejs.org/"/>
+          <shield :source="tsSvg" label="TypeScript" url="https://www.typescriptlang.org/"/>
+          <shield :source="vueSvg" label="Vue" url="https://vuejs.org/"/>
+          <shield :source="dockerSvg" label="Docker" url="https://www.docker.com/"/>
+          <shield :source="gitSvg" label="Git" url="https://git-scm.com/"/>
         </div>
       </card>
     </section>
   </main>
 </template>
 
-<style lang="postcss" scoped>
-@import "@style/_animations.scss";
-@import "@style/_variables.scss";
+<style lang="scss" scoped>
+@use "@style/_animations.scss";
+@use "@style/_variables.scss";
 
 .type {
   font-family: monospace;
@@ -141,7 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 .typed-cursor {
   font-size: 1rem;
-  color: $text-secondary-color;
+  color: variables.$text-secondary-color;
   animation: blinking 0.7s infinite steps(1);
+}
+
+.shield-logo {
+  width: 30px;
+  height: 30px;
 }
 </style>

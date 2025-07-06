@@ -8,6 +8,6 @@ import Main from "./views/Main.vue";
   <Main />
 </template>
 
-<style lang="postcss" scoped>
+<style lang="scss" scoped>
 
 </style>

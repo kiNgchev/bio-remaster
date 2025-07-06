@@ -8,8 +8,8 @@
   </div>
 </template>
 
-<style lang="postcss" scoped>
-@import "@style/_variables.scss";
+<style lang="scss" scoped>
+@use "@style/_variables.scss";
 
 .card {
   display: flex;
@@ -19,6 +19,6 @@
   height: 100%;
   padding: 10px;
   background: white;
-  border-radius: $border-radius;
+  border-radius: variables.$border-radius;
 }
 </style>

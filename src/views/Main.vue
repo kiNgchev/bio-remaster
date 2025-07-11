@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ' Just a little DevOPS.<br>' +
       'I love chess and cats! ' +
       'Und Ich lerne <span style="color: #7567ff;font-weight: 500;">Deutsch</span>!<br>' +
+      'You can order the program on my Telegram channel <a style="color: #7567ff;font-weight: 500;" href="https://t.me/kingchev_works">@kingchev_works</a><br>' +
       'You may follow me in my socials, or send a message in DM. Good luck, reader :3'
     ],
     typeSpeed: 50,

@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { Analytics } from '@vercel/analytics/vue';
-import Main from "./views/Main.vue";
 </script>
 
 <template>
   <Analytics />
-  <Main />
+  <router-view />
 </template>
 
 <style lang="scss" scoped>

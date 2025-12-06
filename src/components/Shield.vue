@@ -16,6 +16,10 @@ defineProps<{ source: string, label: string, url: string }>();
   padding: 5px;
   border-radius: 5px;
   background-color: variables.$primary-color;
+
+  &:hover {
+    background-color: adjust-color(variables.$primary-color, $lightness: 10%);
+  }
 }
 
 .shield-logo {
@@ -26,5 +30,6 @@ defineProps<{ source: string, label: string, url: string }>();
 .shield-label {
   margin-left: 5px;
   margin-right: 5px;
+  color: variables.$text-tertiary-color;
 }
 </style>

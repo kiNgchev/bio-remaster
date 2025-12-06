@@ -5,34 +5,42 @@
 }
 
 @media (hover: hover) {
-  .card:hover {
+  .card:hover, .stat-item:hover {
     transition: variables.$scaling-time;
     transform: scale(variables.$scaling-percent-2);
   }
   
-  .social:hover, .shield:hover {
+  .social:hover, .shield:hover, .nav-button:hover {
     transition: variables.$scaling-time;
     transform: scale(variables.$scaling-percent-1);
   }
   
-  .card:not(:hover), .social:not(:hover), .shield:not(:hover) {
+  .card:not(:hover),
+  .social:not(:hover),
+  .shield:not(:hover),
+  .nav-button:not(:hover),
+  .stat-item:not(:hover) {
     transition: variables.$scaling-time;
     transform: scale(100%);
   }
 }
 
 @media (hover: none) {
-  .card:active {
+  .card:active, .stat-item:active {
     transition: variables.$scaling-time;
     transform: scale(variables.$scaling-percent-2);
   }
   
-  .social:active, .shield:active {
+  .social:active, .shield:active, .nav-button:active {
     transition: variables.$scaling-time;
     transform: scale(variables.$scaling-percent-1);
   }
   
-  .card:not(:active), .social:not(:active), .shield:not(:active) {
+  .card:not(:active),
+  .social:not(:active),
+  .shield:not(:active),
+  .nav-button:not(:active),
+  .stat-item:not(:active) {
     transition: variables.$scaling-time;
     transform: scale(100%);
   }

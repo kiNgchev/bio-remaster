@@ -5,6 +5,9 @@ import { convert } from "../utils/timeUtils.ts";
 import Card from "../components/Card.vue";
 import Shield from "../components/Shield.vue";
 import Typed from "typed.js";
+import { useRouter } from 'vue-router';
+import { onMounted, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 
 // socials
 //@ts-ignore
@@ -13,29 +16,55 @@ import socials from "@assets/socials";
 // techs
 //@ts-ignore
 import technologies from "@assets/technologies";
+//@ts-ignore
+import Social from "@components/Social.vue";
 
-const age = calculateAge(7,6,2007)
+const router = useRouter();
+const route = useRoute();
+const age = calculateAge(7,6,2007);
+const typedElement = ref<HTMLElement | null>(null);
+let typedInstance: Typed | null = null;
 
-document.addEventListener('DOMContentLoaded', () => {
-  new Typed('#type', {
-    strings: [
-      'Heeeeey... ' +
-      'Hello! ' +
-      'I\'m a <span style="color: #7567ff;font-weight: 500;">Kotlin</span> &amp; <span style="color: #7567ff;font-weight: 500;">Go</span> &amp; <span style="color: #7567ff;font-weight: 500;">Rust</span> enjoyer.' +
-      ' For more than three years I program bots, server apps, scripts, SPA. ' +
-      'I wanna be cool at <span style="color: #7567ff;font-weight: 500;">backend</span> and <span style="color: #7567ff;font-weight: 500;">frontend</span> development.' +
-      ' Just a little DevOPS.<br>' +
-      'I love chess and cats! ' +
-      'Und Ich lerne <span style="color: #7567ff;font-weight: 500;">Deutsch</span>!<br>' +
-      'You can order the program on my Telegram channel <a style="color: #7567ff;font-weight: 500;" href="https://t.me/kingchev_works">@kingchev_works</a><br>' +
-      'You may follow me in my socials, or send a message in DM. Good luck, reader :3'
-    ],
-    typeSpeed: 50,
-    startDelay: 500,
-    showCursor: true,
-    cursorChar: '|',
-    contentType: 'html'
-  });
+const initTyped = () => {
+  if (typedElement.value) {
+    if (typedInstance) {
+      typedInstance.destroy();
+    }
+    
+    typedInstance = new Typed(typedElement.value, {
+      strings: [
+        'Heeeeey... ' +
+        'Hello! ' +
+        'I\'m a <span style="color: #7567ff;font-weight: 500;">Kotlin</span> &amp; <span style="color: #7567ff;font-weight: 500;">Go</span> &amp; <span style="color: #7567ff;font-weight: 500;">Rust</span> enjoyer.' +
+        ' For more than three years I program bots, server apps, scripts, SPA. ' +
+        'I wanna be cool at <span style="color: #7567ff;font-weight: 500;">backend</span> and <span style="color: #7567ff;font-weight: 500;">frontend</span> development.' +
+        ' Just a little DevOPS.<br>' +
+        'I love chess and cats! ' +
+        'Und Ich lerne <span style="color: #7567ff;font-weight: 500;">Deutsch</span>!<br>' +
+        'You can order the program on my Telegram channel <a style="color: #7567ff;font-weight: 500;" href="https://t.me/kingchev_works">@kingchev_works</a><br>' +
+        'You may follow me in my socials, or send a message in DM. Good luck, reader :3'
+      ],
+      typeSpeed: 25,
+      startDelay: 500,
+      showCursor: true,
+      cursorChar: '|',
+      contentType: 'html'
+    });
+  }
+};
+
+onMounted(() => {
+  setTimeout(() => {
+    initTyped();
+  }, 100);
+});
+
+watch(() => route.path, (newPath) => {
+  if (newPath === '/') {
+    setTimeout(() => {
+      initTyped();
+    }, 100);
+  }
 });
 </script>
 
@@ -46,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2>KiNgchev</h2>
         <Avatar />
         <div class="info-table">
-          <table style="width: 80%; margin: auto">
+          <table class="w-4/5 m-auto">
             <tbody>
             <tr>
               <td class="table-ceil">
@@ -76,36 +105,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3 class="table-header">Location:</h3>
               </td>
               <td class="table-ceil">
-                <a href="https://yandex.ru/maps/geo/sarov/53082682/?ll=43.346066%2C54.911365&z=12.29" target="_blank">
-                  Russian Federation, Sarov
+                <a href="https://yandex.ru/maps/geo/moskva/53166393/" target="_blank">
+                  Russian Federation, Moscow
                 </a>
               </td>
             </tr>
             </tbody>
           </table>
         </div>
+        <div class="navigation">
+          <button @click="router.push('/projects')" class="nav-button">View My Projects</button>
+        </div>
       </card>
       <card>
         <h2>Socials</h2>
         <div class="socials">
-          <a target="_blank" href="https://github.com/kiNgchev">
-            <img :src="socials.githubSvg" alt="kingchev github" class="social"/>
-          </a>
-          <a target="_blank" href="https://discord.com/users/743878110747033691">
-            <img :src="socials.discordSvg" alt="kingchev discord" class="social"/>
-          </a>
-          <a target="_blank" href="https://x.com/TheKiNgchev?t=XMZWxPmnL9kAAum9iMfBEQ&s=09">
-            <img :src="socials.xSvg" alt="kingchev x" class="social"/>
-          </a>
-          <a target="_blank" href="https://www.twitch.tv/k1ngchev">
-            <img :src="socials.twitchSvg" alt="kingchev twitch" class="social"/>
-          </a>
-          <a target="_blank" href="https://t.me/k1ngchev">
-            <img :src="socials.telegramSvg" alt="kingchev telegram channel" class="social"/>
-          </a>
-          <a target="_blank" href="https://www.youtube.com/@_k1ngchev">
-            <img :src="socials.youtubeSvg" alt="kingchev youtube" class="social"/>
-          </a>
+          <social :source="socials.githubSvg" url="https://github.com/kiNgchev"/>
+          <social :source="socials.discordSvg" url="https://discord.com/users/743878110747033691"/>
+          <social :source="socials.xSvg" url="https://x.com/TheKiNgchev?t=XMZWxPmnL9kAAum9iMfBEQ&s=09"/>
+          <social :source="socials.twitchSvg" url="https://www.twitch.tv/k1ngchev"/>
+          <social :source="socials.telegramSvg" url="https://t.me/k1ngchev"/>
+          <social :source="socials.youtubeSvg" url="https://www.youtube.com/@_k1ngchev"/>
         </div>
       </card>
     </section>
@@ -113,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <card>
         <h2>Bio</h2>
         <p>
-          <span id="type"></span>
+          <span ref="typedElement" id="type"></span>
         </p>
       </card>
       <card>
@@ -157,5 +177,27 @@ document.addEventListener('DOMContentLoaded', () => {
 .shield-logo {
   width: 30px;
   height: 30px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  background-color: variables.$primary-color;
+  color: white;
+  border: none;
+  border-radius: variables.$border-radius;
+  cursor: pointer;
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 500;
+  transition: variables.$scaling-time;
+  
+  &:hover {
+    background-color: adjust-color(variables.$primary-color, $lightness: 10%);
+  }
 }
 </style>

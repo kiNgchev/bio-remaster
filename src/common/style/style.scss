@@ -97,6 +97,10 @@ h1 {
   text-align: start;
 }
 
+.table-ceil a {
+  font-weight: 500;
+}
+
 .socials {
   width: 100%;
   display: flex;
@@ -108,9 +112,9 @@ h1 {
 }
 
 .social {
-  width: 75px;
-  height: 75px;
-  
+  width: 50px;
+  height: 50px;
+
   -webkit-user-drag: none;
   user-select: none;
 }

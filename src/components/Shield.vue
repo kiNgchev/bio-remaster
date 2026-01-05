@@ -1,10 +1,14 @@
 <script setup lang="ts">
-defineProps<{ source: string, label: string, url: string }>();
+defineProps<{ source: string; label: string; url: string }>();
 </script>
 
 <template>
-  <a :href="url" target="_blank" class="shield flex wrap-normal justify-evenly content-center">
-    <img :src="source" alt="kingchev" class="shield-logo m-auto"/>
+  <a
+    :href="url"
+    target="_blank"
+    class="shield flex wrap-normal justify-evenly content-center"
+  >
+    <img :src="source" alt="kingchev" class="shield-logo m-auto" />
     <p class="shield-label self-center">{{ label }}</p>
   </a>
 </template>
@@ -16,10 +20,6 @@ defineProps<{ source: string, label: string, url: string }>();
   padding: 5px;
   border-radius: 5px;
   background-color: variables.$primary-color;
-
-  &:hover {
-    background-color: adjust-color(variables.$primary-color, $lightness: 10%);
-  }
 }
 
 .shield-logo {

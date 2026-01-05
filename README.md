@@ -1,5 +1,20 @@
-# Vue 3 + TypeScript + Vite
+# kiNgchev bio
+My own website for bio, written on Typescript + Vue.js.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This site shows my experience, projects, hobbies, preferences, tells about who I am.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+For install:
+```bash
+npm install
+```
+
+For dev run:
+```bash
+npm run dev
+```
+
+For create prod distribution:
+```bash
+npn run build
+```
+Prod distribution created in `/dist` directory.

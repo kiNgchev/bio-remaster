@@ -3,7 +3,14 @@
 @use "_animations.scss";
 @use "_base.scss";
 
-h1, h2, h3, h4, h5, h6, a, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
   margin-top: 0;
   color: variables.$text-primary-color;
 }
@@ -30,7 +37,7 @@ h1 {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
-  
+
   align-content: space-evenly;
 }
 
@@ -38,9 +45,9 @@ h1 {
   width: 100%;
   display: inline-flex;
   gap: variables.$block-distance;
-  
+
   position: relative;
-  
+
   justify-content: space-evenly;
 }
 
@@ -104,7 +111,9 @@ h1 {
 .socials {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
   align-content: space-evenly;
   a {
     align-self: center;
@@ -112,8 +121,8 @@ h1 {
 }
 
 .social {
-  width: 50px;
-  height: 50px;
+  width: 8vh;
+  height: 8vh;
 
   -webkit-user-drag: none;
   user-select: none;
@@ -122,4 +131,3 @@ h1 {
 .repo {
   width: 100%;
 }
-

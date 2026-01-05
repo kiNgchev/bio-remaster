@@ -5,9 +5,7 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -22,8 +20,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": [
-    "vite.config.ts",
-    "tailwind.config.ts",
-  ]
+  "include": ["prettier.config.ts", "vite.config.ts", "tailwind.config.ts"]
 }

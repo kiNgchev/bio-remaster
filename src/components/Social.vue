@@ -1,10 +1,14 @@
 <script setup lang="ts">
-defineProps<{ source: string, url: string }>();
+defineProps<{ source: string; url: string }>();
 </script>
 
 <template>
-  <a :href="url" target="_blank" class="social flex wrap-normal justify-evenly content-center">
-    <img :src="source" alt="kingchev" class="social-logo m-auto"/>
+  <a
+    :href="url"
+    target="_blank"
+    class="social flex wrap-normal justify-evenly content-center"
+  >
+    <img :src="source" alt="kingchev" class="social-logo m-auto" />
   </a>
 </template>
 
@@ -16,10 +20,6 @@ defineProps<{ source: string, url: string }>();
   padding: 5px;
   border-radius: variables.$border-radius;
   background-color: variables.$primary-color;
-
-  &:hover {
-    background-color: adjust-color(variables.$primary-color, $lightness: 10%);
-  }
 }
 
 .social-logo {

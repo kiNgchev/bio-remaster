@@ -1,5 +1,5 @@
 <template>
-  <img src="@assets/avatar.jpg" alt="kingchev avatar" class="avatar"/>
+  <img src="@assets/avatar.jpg" alt="kingchev avatar" class="avatar" />
 </template>
 
 <style lang="scss" scoped>

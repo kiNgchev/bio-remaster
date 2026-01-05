@@ -1,25 +1,20 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 import tailwindcss from "@tailwindcss/vite";
 import svgLoader from "vite-svg-loader";
-import { fileURLToPath } from "node:url";
+import * as path from "node:path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    tailwindcss(),
-    svgLoader()
-  ],
-  css: {
-  },
+  plugins: [vue(), tailwindcss(), svgLoader()],
+  css: {},
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@style': fileURLToPath(new URL('./src/common/style', import.meta.url)),
-      '@assets': fileURLToPath(new URL('./src/assets/', import.meta.url)),
-      '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
-      '@views': fileURLToPath(new URL('./src/views', import.meta.url))
+      "@": path.resolve(__dirname, "./src"),
+      "@style": path.resolve(__dirname, "./src/common/style"),
+      "@assets": path.resolve(__dirname, "./src/assets/"),
+      "@components": path.resolve(__dirname, "./src/components"),
+      "@views": path.resolve(__dirname, "./src/views")
     }
   }
-})
+});

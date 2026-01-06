@@ -9,6 +9,7 @@ const currentTrackIndex = ref(0);
 const isPlaying = ref(false);
 const currentTime = ref(0);
 const duration = ref(0);
+const isLoading = ref(false);
 
 const currentTrack = computed(() => {
   if (props.playlist && props.playlist.length > 0)
@@ -23,11 +24,13 @@ const progress = computed(() => {
 
 const togglePlay = () => {
   if (currentTrack.value) {
-    if (isPlaying.value) audio.pause();
-    else {
-      if (audio.src !== currentTrack.value.src)
+    if (isPlaying.value) {
+      audio.pause();
+    } else {
+      if (audio.src !== currentTrack.value.src) {
+        isLoading.value = true;
         audio.src = currentTrack.value.src;
-
+      }
       audio.play();
     }
     isPlaying.value = !isPlaying.value;
@@ -58,6 +61,7 @@ const selectTrack = (index: number) => {
 
 const playCurrentTrack = () => {
   if (currentTrack.value) {
+    isLoading.value = true;
     audio.src = currentTrack.value.src;
     audio.play();
     isPlaying.value = true;
@@ -86,14 +90,38 @@ const handleEnded = () => {
   nextTrack(); // Play next track when current finishes
 };
 
+const handleLoadStart = () => {
+  isLoading.value = true;
+};
+
+const handleCanPlay = () => {
+  isLoading.value = false;
+};
+
+const handleWaiting = () => {
+  isLoading.value = true;
+};
+
+const handlePlaying = () => {
+  isLoading.value = false;
+};
+
 onMounted(() => {
   audio.addEventListener("timeupdate", updateCurrentTime);
   audio.addEventListener("ended", handleEnded);
+  audio.addEventListener("loadstart", handleLoadStart);
+  audio.addEventListener("canplay", handleCanPlay);
+  audio.addEventListener("waiting", handleWaiting);
+  audio.addEventListener("playing", handlePlaying);
 });
 
 onUnmounted(() => {
   audio.removeEventListener("timeupdate", updateCurrentTime);
   audio.removeEventListener("ended", handleEnded);
+  audio.removeEventListener("loadstart", handleLoadStart);
+  audio.removeEventListener("canplay", handleCanPlay);
+  audio.removeEventListener("waiting", handleWaiting);
+  audio.removeEventListener("playing", handlePlaying);
   audio.pause();
 });
 </script>
@@ -120,9 +148,14 @@ onUnmounted(() => {
           </svg>
         </button>
 
-        <button @click="togglePlay" class="play-btn">
+        <button @click="togglePlay" class="play-btn" :disabled="isLoading">
+          <div v-if="isLoading" class="ring-loader">
+            <svg class="ring-loader-svg" viewBox="0 0 38 38">
+              <circle class="ring-loader-path" cx="19" cy="19" r="15" fill="none" stroke-width="4" />
+            </svg>
+          </div>
           <svg
-            v-if="!isPlaying"
+            v-else-if="!isPlaying"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -156,6 +189,7 @@ onUnmounted(() => {
           :value="progress"
           @input="onProgressChange"
           :max="duration"
+          :disabled="isLoading"
         />
         <span class="time">{{ formatTime(duration) }}</span>
       </div>
@@ -287,12 +321,53 @@ onUnmounted(() => {
     align-items: center;
     justify-content: center;
     margin: 0 20px;
+    position: relative;
 
     &:hover {
       background-color: color.adjust(
         variables.$primary-color,
         $lightness: -10%
       );
+    }
+
+    &[disabled] {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.ring-loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-svg {
+    width: 24px;
+    height: 24px;
+    transform: rotate(-90deg);
+  }
+
+  &-path {
+    stroke: white;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
     }
   }
 }
@@ -315,6 +390,10 @@ onUnmounted(() => {
     border-radius: 2px;
     outline: none;
     -webkit-appearance: none;
+
+    &[disabled] {
+      opacity: 0.6;
+    }
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;

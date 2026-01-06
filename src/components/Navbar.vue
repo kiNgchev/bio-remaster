@@ -1,28 +1,27 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from "vue-router";
-import {useI18n} from "vue-i18n";
-import {ref} from "vue";
+import { useI18n } from "vue-i18n";
+import { ref } from "vue";
 
 const router = useRouter();
 const route = useRoute();
-const { locale, availableLocales } = useI18n()
+const { locale, availableLocales } = useI18n();
 
 const navigateTo = (path: string) => {
   if (route.path === path) return router.push("/");
   router.push(path);
 };
 
-let l = ref(locale.value)
+let l = ref(locale.value);
 
 const changeLocale = () => {
-  let index = availableLocales.indexOf(l.value) + 1
+  let index = availableLocales.indexOf(l.value) + 1;
 
-  if (index > availableLocales.length - 1)
-    index = 0;
+  if (index > availableLocales.length - 1) index = 0;
 
-  l.value = availableLocales[index]
+  l.value = availableLocales[index];
   locale.value = l.value;
-}
+};
 </script>
 
 <template>

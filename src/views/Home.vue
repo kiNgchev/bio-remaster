@@ -12,8 +12,8 @@ import technologies from "@assets/technologies";
 
 import Social from "@components/Social.vue";
 import Navbar from "@components/Navbar.vue";
-import {useI18n} from "vue-i18n";
-import {getLocalizedBioText} from "@/i18n";
+import { useI18n } from "vue-i18n";
+import { getLocalizedBioText } from "@/i18n";
 
 const route = useRoute();
 const { locale } = useI18n();
@@ -28,7 +28,7 @@ const initTyped = () => {
     }
 
     typedInstance = new Typed(typedElement.value, {
-      strings: [ getLocalizedBioText(locale.value) ],
+      strings: [getLocalizedBioText(locale.value)],
       typeSpeed: 25,
       startDelay: 500,
       showCursor: true,
@@ -77,7 +77,9 @@ watch(
             <tbody>
               <tr>
                 <td class="table-ceil">
-                  <h3 class="table-header">{{ $t("body.home.kingchev.nicknames") }}:</h3>
+                  <h3 class="table-header">
+                    {{ $t("body.home.kingchev.nicknames") }}:
+                  </h3>
                 </td>
                 <td class="table-ceil">
                   <a>kiNgchev, Hisoka Morrow</a>
@@ -85,17 +87,22 @@ watch(
               </tr>
               <tr>
                 <td class="table-ceil">
-                  <h3 class="table-header">{{ $t("body.home.kingchev.age.header") }}:</h3>
+                  <h3 class="table-header">
+                    {{ $t("body.home.kingchev.age.header") }}:
+                  </h3>
                 </td>
                 <td class="table-ceil">
                   <a>
-                    {{ $t("body.home.kingchev.age.field", { age: age }) }}, {{ age }}
+                    {{ $t("body.home.kingchev.age.field", { age: age }) }},
+                    {{ age }}
                   </a>
                 </td>
               </tr>
               <tr>
                 <td class="table-ceil">
-                  <h3 class="table-header">{{ $t("body.home.kingchev.location.header") }}:</h3>
+                  <h3 class="table-header">
+                    {{ $t("body.home.kingchev.location.header") }}:
+                  </h3>
                 </td>
                 <td class="table-ceil">
                   <a

@@ -87,7 +87,7 @@ const updateCurrentTime = () => {
 
 const handleEnded = () => {
   isPlaying.value = false;
-  nextTrack(); // Play next track when current finishes
+  nextTrack();
 };
 
 const handleLoadStart = () => {
@@ -151,7 +151,14 @@ onUnmounted(() => {
         <button @click="togglePlay" class="play-btn" :disabled="isLoading">
           <div v-if="isLoading" class="ring-loader">
             <svg class="ring-loader-svg" viewBox="0 0 38 38">
-              <circle class="ring-loader-path" cx="19" cy="19" r="15" fill="none" stroke-width="4" />
+              <circle
+                class="ring-loader-path"
+                cx="19"
+                cy="19"
+                r="15"
+                fill="none"
+                stroke-width="4"
+              />
             </svg>
           </div>
           <svg

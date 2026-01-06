@@ -6,7 +6,7 @@ import telegramSvg from "./telegram.svg?url";
 import youtubeSvg from "./youtube.svg?url";
 import lichessSvg from "./lichess.svg?url";
 import chessdotcomSvg from "./chessdotcom.svg?url";
-import codeforcesSvg from "./codeforces.svg?url"
+import codeforcesSvg from "./codeforces.svg?url";
 
 const socials = {
   github: {

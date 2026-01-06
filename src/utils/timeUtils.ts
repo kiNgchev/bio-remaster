@@ -1,4 +1,4 @@
-import { convert as convertNumberToWordsRu } from 'number-to-words-ru'
+import { convert as convertNumberToWordsRu } from "number-to-words-ru";
 
 const ones = [
   "",
@@ -83,18 +83,16 @@ export function convertToEn(num: number): number | string {
 }
 
 export function convertToRu(num: number): number | string {
-  return convertNumberToWordsRu(num,
-    {
-      currency: "number",
+  return convertNumberToWordsRu(num, {
+    currency: "number",
 
-      showCurrency: {
-        integer: false
-      },
-      showNumberParts: {
-        fractional: false
-      },
+    showCurrency: {
+      integer: false
+    },
+    showNumberParts: {
+      fractional: false
     }
-  )
+  });
 }
 
 export function calculateAge(date: number, month: number, year: number) {

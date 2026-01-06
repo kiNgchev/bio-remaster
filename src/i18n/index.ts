@@ -1,7 +1,8 @@
 import { createI18n } from "vue-i18n";
-import { convertToEn, convertToRu } from "@/utils/timeUtils.ts";
+import {en as enMessages} from "./en.ts";
+import {ru as ruMessages} from "./ru.ts";
 
-type Scheme = {
+export type Scheme = {
   headers: {
     home: {
       kingchev: string;
@@ -41,6 +42,9 @@ type Scheme = {
         contributions: string;
         clients: string;
       };
+      projects: {
+        demo: string
+      };
     };
     music: {
       about: string;
@@ -55,140 +59,22 @@ type Scheme = {
       };
     };
   };
+  projects: {
+    sj: string,
+    hisoka: string,
+    akhs: string,
+    reverse: string,
+    leetcode: string,
+    bio: string
+  }
 };
 
 const i18n = createI18n<[Scheme], "en" | "ru">({
   locale: "en",
   fallbackLocale: "en",
   messages: {
-    en: {
-      headers: {
-        home: {
-          kingchev: "kiNgchev",
-          socials: "Socials",
-          bio: "Bio",
-          mastered: "What have I mastered?"
-        },
-        projects: {
-          about: "About my projects",
-          stats: "Project stats",
-          projects: "Featured Projects"
-        },
-        music: {
-          about: "About my favorite music",
-          stats: "Yandex music stats"
-        }
-      },
-      body: {
-        home: {
-          kingchev: {
-            age: {
-              header: "Age",
-              field: ({ named }) =>
-                convertToEn(named("age"))
-                  .toString()
-                  .split(" ")
-                  .map((word: any) => {
-                    return word[0].toUpperCase() + word.substring(1);
-                  })
-                  .join(" ")
-            },
-            nicknames: "Nicknames",
-            location: {
-              header: "Location",
-              field: "Russian Federation, Moscow"
-            }
-          }
-        },
-        projects: {
-          about:
-            'Here are some of the projects I\'ve worked on. You can find more on my <a href="https://github.com/kiNgchev">Github</a> profile.',
-          stats: {
-            completed: "Projects Completed",
-            years: "Years Experience",
-            contributions: "Contributions",
-            clients: "Happy Clients"
-          }
-        },
-        music: {
-          about:
-            "Music is an integral part of my life. Without music, I only sleep. That is why I want to share my favorite tracks.",
-          stats: {
-            likes: "Likes",
-            playlists: "Playlists",
-            tracks: "Tracks",
-            style: {
-              header: "Cover version",
-              description: "My favorite music style"
-            }
-          }
-        }
-      }
-    },
-    ru: {
-      headers: {
-        home: {
-          kingchev: "kiNgchev",
-          socials: "Соцсети",
-          bio: "Биография",
-          mastered: "Что я изучил?"
-        },
-        projects: {
-          about: "О моих проектах",
-          stats: "Статистика проектов",
-          projects: "Проекты"
-        },
-        music: {
-          about: "О моей любимой музыке",
-          stats: "Статистика Яндекс музыки"
-        }
-      },
-      body: {
-        home: {
-          kingchev: {
-            age: {
-              header: "Возраст",
-              field: ({ named }) =>
-                convertToRu(named("age"))
-                  .toString()
-                  .split(" ")
-                  .map((word: any) => {
-                    return word[0].toUpperCase() + word.substring(1);
-                  })
-                  .join(" ")
-            },
-            nicknames: "Ники",
-            location: {
-              header: "Локация",
-              field: "Российская Федерация, Москва"
-            }
-          }
-        },
-        projects: {
-          about:
-            'Здесь представлены некоторые из проектов, над которыми я работал. Найти больше вы можете в моем <a href="https://github.com/kiNgchev">Github</a>-профиле.',
-          stats: {
-            completed: "Завершенных проекта",
-            years: "Года опыта",
-            contributions: "Контрибуций",
-            clients: "Довольных клиента"
-          }
-        },
-        music: {
-          about:
-            "Музыка — неотъемлемая часть моей жизни. Без музыки я, разве что, сплю. Именно поэтому я хочу поделиться своими любимыми треками",
-          stats: {
-            likes: "Понравившихся",
-            playlists: "Плейлистов",
-            tracks: "Треков",
-            style: {
-              header: "Кавер",
-              description: "Мой любимый музыкальный жанр"
-            }
-          }
-        }
-      }
-    }
+    en: enMessages,
+    ru: ruMessages
   }
 });
 

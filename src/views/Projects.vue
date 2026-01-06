@@ -42,22 +42,15 @@ import Navbar from "@components/Navbar.vue";
           <div class="projects-list">
             <div class="project-item">
               <h3>SJ</h3>
-              <p>Service that uses Tinder-like mechanism for job hunting.</p>
+              <p v-html="$t('projects.sj')"></p>
               <div class="project-links">
-                <a href="https://swapjob.ru" target="_blank">Live Demo</a>
+                <a href="https://swapjob.ru" target="_blank">{{ $t("body.projects.projects.demo") }}</a>
               </div>
             </div>
 
             <div class="project-item">
               <h3>Hisoka Morrow Bot</h3>
-              <p>
-                Multifunctional Discord bot stylized as Hisoka Morrow from
-                <a
-                  target="_blank"
-                  href="https://en.wikipedia.org/wiki/Hunter_×_Hunter"
-                  >Hunter x Hunter</a
-                >. Bot was written on Kotlin.
-              </p>
+              <p v-html="$t('projects.hisoka')"></p>
               <div class="project-links">
                 <a href="https://github.com/kiNgchev/Hisoka" target="_blank"
                   >GitHub</a
@@ -66,18 +59,14 @@ import Navbar from "@components/Navbar.vue";
                 <a
                   href="https://discord.com/oauth2/authorize?client_id=1271073974356279396&permissions=8&integration_type=0&scope=bot"
                   target="_blank"
-                  >Live Demo</a
+                  >{{ $t("body.projects.projects.demo") }}</a
                 >
               </div>
             </div>
 
             <div class="project-item">
               <h3>AKHS</h3>
-              <p>
-                Collection of services for automation tasks, written on Kotlin
-                with Spring Framework. All services linked with each other with
-                the help of Apache Kafka.
-              </p>
+              <p v-html="$t('projects.akhs')"></p>
               <div class="project-links">
                 <a href="https://github.com/kiNgchev/AKHS" target="_blank"
                   >GitHub</a
@@ -87,9 +76,7 @@ import Navbar from "@components/Navbar.vue";
 
             <div class="project-item">
               <h3>Reverse Rewrite</h3>
-              <p>
-                Rewrote version of my first project and mz first Discord bot.
-              </p>
+              <p v-html="$t('projects.reverse')"></p>
               <div class="project-links">
                 <a
                   href="https://github.com/kiNgchev/ReverseRewrite"
@@ -100,20 +87,14 @@ import Navbar from "@components/Navbar.vue";
                 <a
                   href="https://discord.com/oauth2/authorize?client_id=1271073974356279396&permissions=8&integration_type=0&scope=bot"
                   target="_blank"
-                  >Live Demo</a
+                  >{{ $t("body.projects.projects.demo") }}</a
                 >
               </div>
             </div>
 
             <div class="project-item">
               <h3>Leetcode-rs</h3>
-              <p>
-                My owned
-                <a target="_blank" href="https://leetcode.com/u/kingchev/"
-                  >Leetcode</a
-                >
-                problems solves, written on Rust.
-              </p>
+              <p v-html="$t('projects.leetcode')"></p>
               <div class="project-links">
                 <a
                   href="https://github.com/kiNgchev/leetcode-rs"
@@ -125,7 +106,7 @@ import Navbar from "@components/Navbar.vue";
 
             <div class="project-item">
               <h3>Bio</h3>
-              <p>My own bio website, written on TypeScript and Vue.js.</p>
+              <p v-html="$t('projects.bio')"></p>
               <div class="project-links">
                 <a
                   href="https://github.com/kiNgchev/bio-remaster"
@@ -133,7 +114,7 @@ import Navbar from "@components/Navbar.vue";
                   >GitHub</a
                 >
                 |
-                <a href="/">Live Demo</a>
+                <a href="/">{{ $t("body.projects.projects.demo") }}</a>
               </div>
             </div>
           </div>

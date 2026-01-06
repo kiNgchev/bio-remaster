@@ -8,31 +8,28 @@ import Navbar from "@components/Navbar.vue";
   <main class="main">
     <section class="column">
       <card>
-        <h2>About my Projects</h2>
-        <p>
-          Here are some of the projects I've worked on. You can find more on my
-          <a href="https://github.com/kiNgchev">Github</a> profile.
-        </p>
+        <h2>{{ $t("headers.projects.about") }}</h2>
+        <p v-html="$t('body.projects.about')"></p>
       </card>
 
       <card>
-        <h2>Project Stats</h2>
+        <h2>{{ $t("headers.projects.stats") }}</h2>
         <div class="stats-container">
           <div class="stat-item">
             <h3>3</h3>
-            <p>Projects Completed</p>
+            <p>{{ $t("body.projects.stats.completed") }}</p>
           </div>
           <div class="stat-item">
             <h3>3+</h3>
-            <p>Years Experience</p>
+            <p>{{ $t("body.projects.stats.years") }}</p>
           </div>
           <div class="stat-item">
             <h3>15+</h3>
-            <p>Contributions</p>
+            <p>{{ $t("body.projects.stats.contributions") }}</p>
           </div>
           <div class="stat-item">
             <h3>2</h3>
-            <p>Happy Clients</p>
+            <p>{{ $t("body.projects.stats.clients") }}</p>
           </div>
         </div>
       </card>
@@ -40,7 +37,7 @@ import Navbar from "@components/Navbar.vue";
 
     <section class="column">
       <card>
-        <h2>Featured Projects</h2>
+        <h2>{{ $t("headers.projects.projects") }}</h2>
         <div class="projects-list-container">
           <div class="projects-list">
             <div class="project-item">

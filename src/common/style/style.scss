@@ -61,13 +61,6 @@ h1 {
   align-content: space-evenly;
 }
 
-.card {
-  height: 100%;
-  padding: 10px;
-  background: white;
-  border-radius: variables.$border-radius;
-}
-
 .technologies {
   display: flex;
   flex-wrap: wrap;
@@ -86,48 +79,4 @@ h1 {
     gap: 15px;
     justify-content: space-evenly;
   }
-}
-
-.table-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: space-evenly;
-}
-
-.table-header {
-  margin: 0;
-}
-
-.table-ceil:nth-child(odd) {
-  width: 30%;
-  text-align: start;
-}
-
-.table-ceil a {
-  font-weight: 500;
-}
-
-.socials {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  align-content: space-evenly;
-  a {
-    align-self: center;
-  }
-}
-
-.social {
-  width: 8vh;
-  height: 8vh;
-
-  -webkit-user-drag: none;
-  user-select: none;
-}
-
-.repo {
-  width: 100%;
 }

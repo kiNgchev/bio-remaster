@@ -10,30 +10,27 @@ import music from "@assets/music/";
   <main class="main">
     <section class="column">
       <card>
-        <h2>About my favorite music</h2>
-        <p>
-          Music is an integral part of my life.
-          Without music, I only sleep. That is why I want to share my favorite tracks.
-        </p>
+        <h2>{{ $t("headers.music.about") }}</h2>
+        <p v-html="$t('body.music.about')"></p>
       </card>
       <card>
-        <h2>Yandex music stats.</h2>
+        <h2>{{ $t("headers.projects.stats") }}</h2>
         <div class="stats-container">
           <div class="stat-item">
             <h3>32</h3>
-            <p>Likes</p>
+            <p>{{ $t("body.music.stats.likes") }}</p>
           </div>
           <div class="stat-item">
             <h3>8</h3>
-            <p>Playlists</p>
+            <p>{{ $t("body.music.stats.playlists") }}</p>
           </div>
           <div class="stat-item">
             <h3>190</h3>
-            <p>Tracks</p>
+            <p>{{ $t("body.music.stats.tracks") }}</p>
           </div>
           <div class="stat-item">
-            <h3>Cover version</h3>
-            <p>My favorite music style</p>
+            <h3>{{ $t("body.music.stats.style.header") }}</h3>
+            <p>{{ $t("body.music.stats.style.description") }}</p>
           </div>
         </div>
       </card>

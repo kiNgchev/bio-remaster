@@ -1,3 +1,5 @@
+import { convert as convertNumberToWordsRu } from 'number-to-words-ru'
+
 const ones = [
   "",
   "one",
@@ -75,9 +77,24 @@ function convert_tens(num: number): number | string {
   }
 }
 
-export function convert(num: number): number | string {
+export function convertToEn(num: number): number | string {
   if (num == 0) return "zero";
   else return convert_millions(num);
+}
+
+export function convertToRu(num: number): number | string {
+  return convertNumberToWordsRu(num,
+    {
+      currency: "number",
+
+      showCurrency: {
+        integer: false
+      },
+      showNumberParts: {
+        fractional: false
+      },
+    }
+  )
 }
 
 export function calculateAge(date: number, month: number, year: number) {
@@ -85,7 +102,7 @@ export function calculateAge(date: number, month: number, year: number) {
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const dob = new Date(year, month - 1, date);
   const dobnow = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
-  let age;
+  let age: number;
 
   age = today.getFullYear() - dob.getFullYear();
   if (today < dobnow) {

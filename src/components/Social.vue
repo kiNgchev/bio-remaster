@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ source: string; url: string }>();
+defineProps<{ source: string; name: string, url: string }>();
 </script>
 
 <template>
@@ -8,7 +8,7 @@ defineProps<{ source: string; url: string }>();
     target="_blank"
     class="social flex wrap-normal justify-evenly content-center"
   >
-    <img :src="source" alt="kingchev" class="social-logo m-auto" />
+    <img :src="source" :alt="`kingchev ${name}`" class="social-logo m-auto" />
   </a>
 </template>
 
@@ -16,6 +16,12 @@ defineProps<{ source: string; url: string }>();
 @use "@style/_variables.scss";
 
 .social {
+  width: 7vh;
+  height: 7vh;
+
+  -webkit-user-drag: none;
+  user-select: none;
+
   text-align: center;
   padding: 5px;
   border-radius: variables.$border-radius;

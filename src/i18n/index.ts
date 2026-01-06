@@ -198,9 +198,9 @@ const en = "Heeeeey... " +
   "You may follow me in my socials, or send a message in DM. Good luck, reader :3"
 
 const ru = "Хееееей... " +
-  "Привет " +
+  "Привет! " +
   'Я <span style="color: #7567ff;font-weight: 500;">Kotlin</span>, <span style="color: #7567ff;font-weight: 500;">Go</span> &amp; <span style="color: #7567ff;font-weight: 500;">Rust</span> любитель.' +
-  " Более чем три года я пишу ботов, серверные приложения, скрипты и SPA" +
+  " Более чем три года я пишу ботов, серверные приложения, скрипты и SPA. " +
   'Я нацелен стать лучше в <span style="color: #7567ff;font-weight: 500;">backend</span> и <span style="color: #7567ff;font-weight: 500;">frontend</span> разработке.' +
   " Чуть-чуть DevOps.<br>" +
   "Я люблю шахматы и котиков! " +

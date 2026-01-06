@@ -1,5 +1,5 @@
 # kiNgchev bio
-My own website for bio, written on Typescript + Vue.js.
+My own website for bio, written on TypeScript + Vue.js.
 
 This site shows my experience, projects, hobbies, preferences, tells about who I am.
 

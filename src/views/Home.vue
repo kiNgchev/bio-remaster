@@ -13,12 +13,12 @@ import technologies from "@assets/technologies";
 import Social from "@components/Social.vue";
 import Navbar from "@components/Navbar.vue";
 import {useI18n} from "vue-i18n";
+import {getLocalizedBioText} from "@/i18n";
 
 const route = useRoute();
-const { t, locale } = useI18n();
+const { locale } = useI18n();
 const age = calculateAge(7, 6, 2007);
 const typedElement = ref<HTMLElement | null>(null);
-const typedText = ref(t("body.home.bio"))
 let typedInstance: Typed | null = null;
 
 const initTyped = () => {
@@ -28,7 +28,7 @@ const initTyped = () => {
     }
 
     typedInstance = new Typed(typedElement.value, {
-      strings: [ typedText.value ],
+      strings: [ getLocalizedBioText(locale.value) ],
       typeSpeed: 25,
       startDelay: 500,
       showCursor: true,
@@ -59,7 +59,6 @@ watch(
   () => locale.value,
   (_) => {
     setTimeout(() => {
-      typedText.value = t("body.home.bio");
       initTyped();
     }, 100);
   }

@@ -86,7 +86,7 @@ const en =
   "Heeeeey... " +
   "Hello! " +
   "I'm a <a class='s'>Kotlin</a>, <a>Go</a> &amp; <a>Rust</a> enjoyer." +
-  " For more than three years, I have been programming bots, server apps, scripts, and SPA " +
+  " For more than three years, I have been programming bots, server apps, scripts, and SPA." +
   "I aim to become proficient in both <a>backend</a> and <a>frontend</a> development." +
   " Just a little DevOPS.<br>" +
   "I love chess and cats! " +

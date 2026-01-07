@@ -73,6 +73,7 @@ const changeLocale = () => {
       color: variables.$text-tertiary-color;
       text-decoration: none;
       font-weight: 500;
+      font-size: 1.1rem;
       padding: 5px 10px;
       border-radius: 5px;
       transition: all 0.3s ease;

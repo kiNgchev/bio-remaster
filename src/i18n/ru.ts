@@ -40,7 +40,7 @@ export const ru: Scheme = {
         },
         timezone: {
           header: "Часовой пояс",
-          field: "UTC+3, Московский",
+          field: "UTC+3, Московский"
         }
       }
     },

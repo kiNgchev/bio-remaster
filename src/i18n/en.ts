@@ -40,7 +40,7 @@ export const en: Scheme = {
         },
         timezone: {
           header: "Timezone",
-          field: "UTC+3, Moscow timezone",
+          field: "UTC+3, Moscow timezone"
         }
       }
     },

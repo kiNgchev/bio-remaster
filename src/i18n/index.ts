@@ -1,6 +1,6 @@
 import { createI18n } from "vue-i18n";
-import {en as enMessages} from "./en.ts";
-import {ru as ruMessages} from "./ru.ts";
+import { en as enMessages } from "./en.ts";
+import { ru as ruMessages } from "./ru.ts";
 
 export type Scheme = {
   headers: {
@@ -43,7 +43,7 @@ export type Scheme = {
         clients: string;
       };
       projects: {
-        demo: string
+        demo: string;
       };
     };
     music: {
@@ -60,13 +60,13 @@ export type Scheme = {
     };
   };
   projects: {
-    sj: string,
-    hisoka: string,
-    akhs: string,
-    reverse: string,
-    leetcode: string,
-    bio: string
-  }
+    sj: string;
+    hisoka: string;
+    akhs: string;
+    reverse: string;
+    leetcode: string;
+    bio: string;
+  };
 };
 
 const i18n = createI18n<[Scheme], "en" | "ru">({

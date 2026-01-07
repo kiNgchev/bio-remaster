@@ -25,6 +25,7 @@ npn run build
 Prod distribution created in `/dist` directory.
 
 For preview prod distribution:
+
 ```bash
 npm run preview
 ```

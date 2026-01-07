@@ -3,6 +3,8 @@ import Card from "@components/Card.vue";
 import Navbar from "@components/Navbar.vue";
 import Player from "@components/Player.vue";
 import music from "@assets/music/";
+import StatsContainer from "@components/stats/StatsContainer.vue";
+import StatsItem from "@components/stats/StatsItem.vue";
 </script>
 
 <template>
@@ -15,24 +17,21 @@ import music from "@assets/music/";
       </card>
       <card>
         <h2>{{ $t("headers.projects.stats") }}</h2>
-        <div class="stats-container">
-          <div class="stat-item">
-            <h3>32</h3>
-            <p>{{ $t("body.music.stats.likes") }}</p>
-          </div>
-          <div class="stat-item">
-            <h3>8</h3>
-            <p>{{ $t("body.music.stats.playlists") }}</p>
-          </div>
-          <div class="stat-item">
-            <h3>190</h3>
-            <p>{{ $t("body.music.stats.tracks") }}</p>
-          </div>
-          <div class="stat-item">
-            <h3>{{ $t("body.music.stats.style.header") }}</h3>
-            <p>{{ $t("body.music.stats.style.description") }}</p>
-          </div>
-        </div>
+        <stats-container>
+          <stats-item header="32" :description="$t('body.music.stats.likes')" />
+          <stats-item
+            header="8"
+            :description="$t('body.music.stats.playlists')"
+          />
+          <stats-item
+            header="190"
+            :description="$t('body.music.stats.tracks')"
+          />
+          <stats-item
+            :header="$t('body.music.stats.style.header')"
+            :description="$t('body.music.stats.style.description')"
+          />
+        </stats-container>
       </card>
     </section>
 

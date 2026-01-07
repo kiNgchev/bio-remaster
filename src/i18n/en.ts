@@ -1,22 +1,22 @@
-import {convertToEn} from "@/utils/timeUtils.ts";
-import type {Scheme} from "@/i18n/index.ts";
+import { convertToEn } from "@/utils/timeUtils.ts";
+import type { Scheme } from "@/i18n/index.ts";
 
 export const en: Scheme = {
   headers: {
     home: {
       kingchev: "kiNgchev",
-        socials: "Socials",
-        bio: "Bio",
-        mastered: "What have I mastered?"
+      socials: "Socials",
+      bio: "Bio",
+      mastered: "What have I mastered?"
     },
     projects: {
       about: "About my projects",
-        stats: "Project stats",
-        projects: "Featured Projects"
+      stats: "Project stats",
+      projects: "Featured Projects"
     },
     music: {
       about: "About my favorite music",
-        stats: "Yandex music stats"
+      stats: "Yandex music stats"
     }
   },
   body: {
@@ -24,7 +24,7 @@ export const en: Scheme = {
       kingchev: {
         age: {
           header: "Age",
-            field: ({ named }) =>
+          field: ({ named }) =>
             convertToEn(named("age"))
               .toString()
               .split(" ")
@@ -34,9 +34,9 @@ export const en: Scheme = {
               .join(" ")
         },
         nicknames: "Nicknames",
-          location: {
+        location: {
           header: "Location",
-            field: "Russian Federation, Moscow"
+          field: "Russian Federation, Moscow"
         }
       }
     },
@@ -56,23 +56,25 @@ export const en: Scheme = {
     music: {
       about:
         "Music is an integral part of my life. Without music, I only sleep. That is why I want to share my favorite tracks.",
-          stats: {
+      stats: {
         likes: "Likes",
-          playlists: "Playlists",
-          tracks: "Tracks",
-          style: {
+        playlists: "Playlists",
+        tracks: "Tracks",
+        style: {
           header: "Cover version",
-            description: "My favorite music style"
+          description: "My favorite music style"
         }
       }
     }
   },
   projects: {
     sj: "Service that uses Tinder-like mechanism for job hunting.",
-    hisoka: "Multifunctional Discord bot stylized as Hisoka Morrow from <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Hunter_×_Hunter\">Hunter x Hunter</a>. Bot was written on Kotlin.",
+    hisoka:
+      'Multifunctional Discord bot stylized as Hisoka Morrow from <a target="_blank" href="https://en.wikipedia.org/wiki/Hunter_×_Hunter">Hunter x Hunter</a>. Bot was written on Kotlin.',
     akhs: "Collection of services for automation tasks, written on Kotlin with Spring Framework. All services linked with each other with the help of Apache Kafka.",
     reverse: "Rewrote version of my first project and my first Discord bot.",
-    leetcode: "My owned <a target=\"_blank\" href=\"https://leetcode.com/u/kingchev/\">Leetcode</a> problems solves, written on Rust.",
+    leetcode:
+      'My owned <a target="_blank" href="https://leetcode.com/u/kingchev/">Leetcode</a> problems solves, written on Rust.',
     bio: "My own bio website, written on TypeScript and Vue.js."
   }
-}
+};

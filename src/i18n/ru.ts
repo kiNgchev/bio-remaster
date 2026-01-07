@@ -1,22 +1,22 @@
-import type {Scheme} from "@/i18n/index.ts";
-import {convertToRu} from "@/utils/timeUtils.ts";
+import type { Scheme } from "@/i18n/index.ts";
+import { convertToRu } from "@/utils/timeUtils.ts";
 
 export const ru: Scheme = {
   headers: {
     home: {
       kingchev: "kiNgchev",
-        socials: "Соцсети",
-        bio: "Биография",
-        mastered: "Что я изучил?"
+      socials: "Соцсети",
+      bio: "Биография",
+      mastered: "Что я изучил?"
     },
     projects: {
       about: "О моих проектах",
-        stats: "Статистика проектов",
-        projects: "Проекты"
+      stats: "Статистика проектов",
+      projects: "Проекты"
     },
     music: {
       about: "О моей любимой музыке",
-        stats: "Статистика Яндекс музыки"
+      stats: "Статистика Яндекс музыки"
     }
   },
   body: {
@@ -24,7 +24,7 @@ export const ru: Scheme = {
       kingchev: {
         age: {
           header: "Возраст",
-            field: ({ named }) =>
+          field: ({ named }) =>
             convertToRu(named("age"))
               .toString()
               .split(" ")
@@ -34,9 +34,9 @@ export const ru: Scheme = {
               .join(" ")
         },
         nicknames: "Ники",
-          location: {
+        location: {
           header: "Локация",
-            field: "Российская Федерация, Москва"
+          field: "Российская Федерация, Москва"
         }
       }
     },
@@ -56,23 +56,26 @@ export const ru: Scheme = {
     music: {
       about:
         "Музыка — неотъемлемая часть моей жизни. Без музыки я, разве что, сплю. Именно поэтому я хочу поделиться своими любимыми треками",
-          stats: {
+      stats: {
         likes: "Понравившихся",
-          playlists: "Плейлистов",
-          tracks: "Треков",
-          style: {
+        playlists: "Плейлистов",
+        tracks: "Треков",
+        style: {
           header: "Кавер",
-            description: "Мой любимый музыкальный жанр"
+          description: "Мой любимый музыкальный жанр"
         }
       }
     }
   },
   projects: {
     sj: "Сервис, использующий механику Тиндера для поиска работы.",
-    hisoka: "Мультифункциональный дискорд бот, стилизованный как Хисока Мороу из аниме <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Hunter_×_Hunter\">Hunter x Hunter</a>. Бот написан на Kotlin.",
+    hisoka:
+      'Мультифункциональный дискорд бот, стилизованный как Хисока Мороу из аниме <a target="_blank" href="https://en.wikipedia.org/wiki/Hunter_×_Hunter">Hunter x Hunter</a>. Бот написан на Kotlin.',
     akhs: "Совокупность сервисов для автоматизации различных задач, написана на Kotlin с использованием Spring Framework. Все сервисы связаны друг с другом с помощью Apache Kafka.",
-    reverse: "Переписанная версия моего первого проекта и моего первого дискорд бота.",
-    leetcode: "Мои решения задач с <a target=\"_blank\" href=\"https://leetcode.com/u/kingchev/\">Leetcode</a>, написанные на Rust.",
+    reverse:
+      "Переписанная версия моего первого проекта и моего первого дискорд бота.",
+    leetcode:
+      'Мои решения задач с <a target="_blank" href="https://leetcode.com/u/kingchev/">Leetcode</a>, написанные на Rust.',
     bio: "Мой собственный сайт-визитка, написанный на TypeScript и Vue.js."
   }
-}
+};

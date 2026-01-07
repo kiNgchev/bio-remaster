@@ -113,6 +113,19 @@ watch(
                   </a>
                 </td>
               </tr>
+              <tr>
+                <td class="table-ceil">
+                  <h3 class="table-header">
+                    {{ $t("body.home.kingchev.timezone.header") }}:
+                  </h3>
+                </td>
+                <td class="table-ceil">
+                  <a>
+                    {{ $t("body.home.kingchev.timezone.field") }}
+                  </a>
+                </td>
+              </tr>
+
             </tbody>
           </table>
         </div>

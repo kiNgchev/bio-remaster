@@ -32,6 +32,10 @@ export type Scheme = {
           header: string;
           field: string;
         };
+        timezone: {
+          header: string;
+          field: string;
+        };
       };
     };
     projects: {

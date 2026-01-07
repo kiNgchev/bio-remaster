@@ -37,6 +37,10 @@ export const ru: Scheme = {
         location: {
           header: "Локация",
           field: "Российская Федерация, Москва"
+        },
+        timezone: {
+          header: "Часовой пояс",
+          field: "UTC+3, Московский",
         }
       }
     },

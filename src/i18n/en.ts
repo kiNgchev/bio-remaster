@@ -37,6 +37,10 @@ export const en: Scheme = {
         location: {
           header: "Location",
           field: "Russian Federation, Moscow"
+        },
+        timezone: {
+          header: "Timezone",
+          field: "UTC+3, Moscow timezone",
         }
       }
     },

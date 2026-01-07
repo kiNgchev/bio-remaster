@@ -29,7 +29,7 @@ const initTyped = () => {
 
     typedInstance = new Typed(typedElement.value, {
       strings: [getLocalizedBioText(locale.value)],
-      typeSpeed: 25,
+      typeSpeed: 10,
       startDelay: 500,
       showCursor: true,
       cursorChar: "|",

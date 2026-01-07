@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
-    "@vercel/analytics": "^1.5.0",
     "number-to-words-ru": "^2.4.1",
     "tailwindcss": "^4.1.10",
     "typed.js": "^2.1.0",

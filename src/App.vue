@@ -1,9 +1,6 @@
-<script setup lang="ts">
-import { Analytics } from "@vercel/analytics/vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <Analytics />
   <router-view />
 </template>
 

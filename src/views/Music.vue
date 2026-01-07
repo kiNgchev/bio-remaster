@@ -44,37 +44,6 @@ import StatsItem from "@components/stats/StatsItem.vue";
 </template>
 
 <style scoped lang="scss">
-@use "sass:color";
 @use "@style/_animations.scss";
 @use "@style/_variables.scss";
-
-.stats-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  width: 100%;
-}
-
-.stat-item {
-  align-content: center;
-  text-align: center;
-  padding: 15px;
-  border-radius: variables.$border-radius;
-  background-color: #e3e0ff;
-
-  h3 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: variables.$primary-color;
-  }
-
-  p {
-    margin: 5px 0 0;
-    font-size: 0.9rem;
-  }
-
-  &:hover {
-    background-color: color.adjust(variables.$primary-color, $lightness: 20%);
-  }
-}
 </style>

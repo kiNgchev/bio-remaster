@@ -130,7 +130,7 @@ watch(
       </card>
     </section>
     <section class="column">
-      <card>
+      <card class="bio-container">
         <h2>{{ $t("headers.home.bio") }}</h2>
         <p>
           <span ref="typedElement" id="type"></span>
@@ -184,6 +184,16 @@ watch(
   a {
     align-self: center;
   }
+}
+
+.s {
+  font-weight: 400;
+  color: variables.$text-secondary-color;
+  text-decoration: inherit;
+}
+
+.s:hover {
+  color: variables.$text-secondary-shadow-color;
 }
 
 .type {

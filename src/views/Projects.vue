@@ -71,20 +71,12 @@ import StatsItem from "@components/stats/StatsItem.vue";
   }
 
   &::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      180deg,
-      variables.$primary-color,
-      color.adjust(variables.$primary-color, $lightness: -20%)
-    );
+    background: variables.$primary-color;
     border-radius: 10px;
     border: 2px solid #f1f1f1;
 
     &:hover {
-      background: linear-gradient(
-        180deg,
-        color.adjust(variables.$primary-color, $lightness: -10%),
-        color.adjust(variables.$primary-color, $lightness: -30%)
-      );
+      background: color.adjust(variables.$primary-color, $lightness: -10%);
     }
   }
 }

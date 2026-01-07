@@ -434,7 +434,7 @@ onUnmounted(() => {
     }
 
     &.active {
-      background-color: #e6e6ff;
+      background-color: variables.$tertiary-bg-color;
 
       .playlist-item-title {
         color: variables.$primary-color;

@@ -18,7 +18,7 @@ defineProps<{ header: string; description: string }>();
   text-align: center;
   padding: 15px;
   border-radius: variables.$border-radius;
-  background-color: #e3e0ff;
+  background-color: variables.$tertiary-bg-color;
   align-content: center;
 
   h3 {
@@ -33,7 +33,7 @@ defineProps<{ header: string; description: string }>();
   }
 
   &:hover {
-    background-color: color.adjust(variables.$primary-color, $lightness: 20%);
+    background-color: color.adjust(variables.$primary-color, $lightness: 7%);
   }
 }
 </style>

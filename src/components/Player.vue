@@ -402,10 +402,23 @@ onUnmounted(() => {
       opacity: 0.6;
     }
 
-    &::-webkit-slider-thumb {
+    &::-moz-range-thumb {
+      -moz-appearance: none;
       -webkit-appearance: none;
       width: 16px;
       height: 16px;
+      border: 0;
+      border-radius: 50%;
+      background: variables.$primary-color;
+      cursor: pointer;
+    }
+
+    &::-webkit-slider-thumb {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 0;
       border-radius: 50%;
       background: variables.$primary-color;
       cursor: pointer;

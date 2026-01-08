@@ -67,7 +67,7 @@ import StatsItem from "@components/stats/StatsItem.vue";
   padding: 5px;
 
   &::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -78,6 +78,12 @@ import StatsItem from "@components/stats/StatsItem.vue";
     &:hover {
       background: color.adjust(variables.$primary-color, $lightness: -10%);
     }
+  }
+
+  @-moz-document url-prefix() {
+    scrollbar-width: thin;
+    scrollbar-color: variables.$primary-color white;
+    scrollbar-arrow-color: white;
   }
 }
 

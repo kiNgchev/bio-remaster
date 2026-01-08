@@ -48,5 +48,12 @@ export const projects: Project[] = [
     description: "projects.bio",
     source: "https://github.com/kiNgchev/bio-remaster",
     demo: "/"
+  },
+  {
+    id: 7,
+    name: "Zenit VA",
+    description: "projects.zenit",
+    source: "https://github.com/kiNgchev/zenit-va",
+    demo: null
   }
 ];

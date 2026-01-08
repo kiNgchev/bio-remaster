@@ -70,6 +70,7 @@ export type Scheme = {
     reverse: string;
     leetcode: string;
     bio: string;
+    zenit: string;
   };
 };
 

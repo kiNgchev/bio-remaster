@@ -79,6 +79,7 @@ export const en: Scheme = {
     reverse: "Rewrote version of my first project and my first Discord bot.",
     leetcode:
       'My owned <a target="_blank" href="https://leetcode.com/u/kingchev/">Leetcode</a> problems solves, written on Rust.',
-    bio: "My own bio website, written on TypeScript and Vue.js."
+    bio: "My own bio website, written on TypeScript and Vue.js.",
+    zenit: "Simple Voice Assistant, written on Python"
   }
 };

@@ -80,6 +80,7 @@ export const ru: Scheme = {
       "Переписанная версия моего первого проекта и моего первого дискорд бота.",
     leetcode:
       'Мои решения задач с <a target="_blank" href="https://leetcode.com/u/kingchev/">Leetcode</a>, написанные на Rust.',
-    bio: "Мой собственный сайт-визитка, написанный на TypeScript и Vue.js."
+    bio: "Мой собственный сайт-визитка, написанный на TypeScript и Vue.js.",
+    zenit: "Простой голосовой ассистент, написанный на Python."
   }
 };

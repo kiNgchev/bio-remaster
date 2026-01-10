@@ -180,6 +180,7 @@ watch(
 .table-ceil:nth-child(odd) {
   width: 30%;
   text-align: start;
+  vertical-align: top;
 }
 
 .table-ceil a {
@@ -190,32 +191,24 @@ watch(
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  justify-content: space-evenly;
+  justify-items: center;
   align-content: space-evenly;
-  a {
-    align-self: center;
-  }
 }
 
-.s {
-  font-weight: 400;
-  color: variables.$text-secondary-color;
-  text-decoration: inherit;
-}
-
-.s:hover {
-  color: variables.$text-secondary-shadow-color;
-}
-
-.type {
-  font-family: monospace;
-  font-size: 1rem;
+.technologies {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: space-evenly;
 }
 
 .typed-cursor {
   font-size: 1rem;
-  color: variables.$text-secondary-color;
+  color: variables.$secondary-text;
   animation: blinking 0.7s infinite steps(1);
 }
 </style>

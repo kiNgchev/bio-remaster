@@ -71,18 +71,18 @@ import StatsItem from "@components/stats/StatsItem.vue";
   }
 
   &::-webkit-scrollbar-thumb {
-    background: variables.$primary-color;
+    background: variables.$primary;
     border-radius: 10px;
     border: 2px solid #f1f1f1;
 
     &:hover {
-      background: color.adjust(variables.$primary-color, $lightness: -10%);
+      background: color.adjust(variables.$primary, $lightness: -10%);
     }
   }
 
   @-moz-document url-prefix() {
     scrollbar-width: thin;
-    scrollbar-color: variables.$primary-color white;
+    scrollbar-color: variables.$primary white;
     scrollbar-arrow-color: white;
   }
 }

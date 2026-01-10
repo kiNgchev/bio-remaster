@@ -25,7 +25,7 @@ defineProps<{ source: string; name: string; url: string }>();
   text-align: center;
   padding: 5px;
   border-radius: variables.$border-radius;
-  background-color: variables.$primary-color;
+  background-color: variables.$primary-bg;
 }
 
 .social-logo {

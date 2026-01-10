@@ -32,12 +32,12 @@
 
   .social:hover,
   .shield:hover {
-    background-color: color.adjust(variables.$primary-color, $lightness: 10%);
+    background-color: color.adjust(variables.$primary, $lightness: 10%);
   }
 
   .social:not(:hover),
   .shield:not(:hover) {
-    background-color: color.adjust(variables.$primary-color, $lightness: 0%);
+    background-color: color.adjust(variables.$primary, $lightness: 0%);
   }
 }
 
@@ -66,11 +66,11 @@
 
   .social:active,
   .shield:active {
-    background-color: color.adjust(variables.$primary-color, $lightness: 10%);
+    background-color: color.adjust(variables.$primary, $lightness: 10%);
   }
 
   .social:not(:active),
   .shield:not(:active) {
-    background-color: color.adjust(variables.$primary-color, $lightness: 0%);
+    background-color: color.adjust(variables.$primary, $lightness: 0%);
   }
 }

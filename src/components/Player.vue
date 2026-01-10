@@ -316,7 +316,7 @@ onUnmounted(() => {
   }
 
   .play-btn {
-    background: variables.$primary-color;
+    background: variables.$primary;
     border: none;
     color: white;
     cursor: pointer;
@@ -332,7 +332,7 @@ onUnmounted(() => {
 
     &:hover {
       background-color: color.adjust(
-        variables.$primary-color,
+        variables.$primary,
         $lightness: -10%
       );
     }
@@ -409,7 +409,7 @@ onUnmounted(() => {
       height: 16px;
       border: 0;
       border-radius: 50%;
-      background: variables.$primary-color;
+      background: variables.$primary;
       cursor: pointer;
     }
 
@@ -420,7 +420,7 @@ onUnmounted(() => {
       height: 16px;
       border: 0;
       border-radius: 50%;
-      background: variables.$primary-color;
+      background: variables.$primary;
       cursor: pointer;
     }
   }
@@ -447,10 +447,10 @@ onUnmounted(() => {
     }
 
     &.active {
-      background-color: variables.$tertiary-bg-color;
+      background-color: variables.$accent;
 
       .playlist-item-title {
-        color: variables.$primary-color;
+        color: variables.$primary;
       }
     }
 

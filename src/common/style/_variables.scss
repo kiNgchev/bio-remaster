@@ -1,13 +1,17 @@
-/* Colors */
-$primary-color: #ffb0ab;
-$primary-bg-color: white;
-$secondary-color: white;
-$secondary-bg-color: #ffb0ab;
-$tertiary-bg-color: #ffede0;
+/* color theme */
+$primary: #f08080;
+$primary-bg: #f08080;
+$secondary: #f4978e;
+$secondary-bg: white;
+$tertiary: #f8ad9d;
+$quaternary: #fbc4ab;
+$accent: #ffdab9;
+
+
 $text-primary-color: #1a1a1a;
-$text-secondary-color: #ff6b5f;
-$text-secondary-shadow-color: #fd9890;
-$text-tertiary-color: #f1f1f1;
+$secondary-text: #f08080;
+$text-secondary-shadow-color: #f4978e;
+$text-tertiary-color: white;
 /* Values */
 $border-radius: 10px;
 $block-distance: 20px;

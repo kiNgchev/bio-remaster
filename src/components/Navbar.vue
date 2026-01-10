@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
-import { ref } from "vue";
 
 const router = useRouter();
 const route = useRoute();
@@ -12,22 +11,21 @@ const navigateTo = (path: string) => {
   router.push(path);
 };
 
-let l = ref(locale.value);
 
 const changeLocale = () => {
-  let index = availableLocales.indexOf(l.value) + 1;
+  let index = availableLocales.indexOf(locale.value) + 1;
 
-  if (index > availableLocales.length - 1) index = 0;
+  if (index > availableLocales.length - 1)
+    index = 0;
 
-  l.value = availableLocales[index];
-  locale.value = l.value;
+  locale.value = availableLocales[index];
 };
 </script>
 
 <template>
   <header class="navbar">
     <div class="navbar-container">
-      <a v-on:click="changeLocale" class="locale-btn">{{ l }}</a>
+      <a v-on:click="changeLocale" class="locale-btn">{{ locale }}</a>
       <nav class="navbar-nav">
         <a
           @click="navigateTo('/')"
@@ -114,6 +112,7 @@ const changeLocale = () => {
         }
 
         &.active {
+          text-decoration: underline;
           transition: variables.$scaling-time;
           transform: scale(115%);
 

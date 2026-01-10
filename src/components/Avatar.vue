@@ -9,7 +9,7 @@
   width: 200px;
   height: 200px;
   border-radius: variables.$border-radius;
-  border: 3px solid #f7d6d1;
+  border: 3px solid variables.$quaternary;
   margin: auto;
 
   -webkit-user-drag: none;

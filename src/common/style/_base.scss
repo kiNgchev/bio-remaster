@@ -8,7 +8,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: variables.$secondary-bg-color;
+  background: variables.$primary-bg;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,7 +22,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: variables.$secondary-bg-color;
+  background: variables.$primary-bg;
 
   -webkit-user-drag: none;
   user-select: none;
@@ -32,4 +32,6 @@ h1,
 h2 {
   font-size: 20px;
   font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: variables.$primary;
 }

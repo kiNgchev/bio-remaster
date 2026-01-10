@@ -19,7 +19,7 @@ defineProps<{ source: string; label: string; url: string }>();
 .shield {
   padding: 5px;
   border-radius: 5px;
-  background-color: variables.$primary-color;
+  background-color: variables.$primary-bg;
 }
 
 .shield-logo {

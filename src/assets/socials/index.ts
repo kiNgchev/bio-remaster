@@ -7,6 +7,7 @@ import youtubeSvg from "./youtube.svg?url";
 import lichessSvg from "./lichess.svg?url";
 import chessdotcomSvg from "./chessdotcom.svg?url";
 import codeforcesSvg from "./codeforces.svg?url";
+import steamSvg from "./steam.svg?url"
 
 const socials = {
   github: {
@@ -62,6 +63,12 @@ const socials = {
     name: "Codeforces",
     link: "https://codeforces.com/profile/kiNgchev",
     icon: codeforcesSvg
+  },
+  steam: {
+    id: 10,
+    name: "Steam",
+    link: "https://steamcommunity.com/id/k1ngchev/",
+    icon: steamSvg
   }
 };
 

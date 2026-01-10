@@ -10,8 +10,10 @@ import csharpSvg from "@assets/technologies/c-sharp.svg?url";
 import jsSvg from "@assets/technologies/js.svg?url";
 import tsSvg from "@assets/technologies/ts.svg?url";
 import vueSvg from "@assets/technologies/vue.svg?url";
+import nuxtSvg from "@assets/technologies/nuxt.svg?url";
 import dockerSvg from "@assets/technologies/docker.svg?url";
 import gitSvg from "@assets/technologies/git.svg?url";
+import dotnetSvg from "@assets/technologies/dotnet.svg?url";
 
 const technologies = {
   kotlin: {
@@ -86,6 +88,12 @@ const technologies = {
     link: "https://vuejs.org/",
     icon: vueSvg
   },
+  nuxt: {
+    id: 13,
+    name: "Nuxt",
+    link: "https://nuxt.com/",
+    icon: nuxtSvg
+  },
   docker: {
     id: 13,
     name: "Docker",
@@ -97,6 +105,12 @@ const technologies = {
     name: "Git",
     link: "https://git-scm.com/",
     icon: gitSvg
+  },
+  dotnet: {
+    id: 15,
+    name: ".NET",
+    link: "https://dotnet.microsoft.com/",
+    icon: dotnetSvg
   }
 };
 

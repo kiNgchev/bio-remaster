@@ -11,8 +11,8 @@ defineProps<{ header: string; description: string }>();
 
 <style scoped lang="scss">
 @use "sass:color";
-@use "@style/_variables.scss";
-@use "@style/_animations.scss";
+@use "@style/variables";
+@use "@style/animations";
 
 .stat-item {
   text-align: center;

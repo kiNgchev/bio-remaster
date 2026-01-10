@@ -53,7 +53,7 @@ const changeLocale = () => {
 </template>
 
 <style lang="scss" scoped>
-@use "@style/_variables.scss";
+@use "@style/variables";
 
 .navbar {
   top: 0;

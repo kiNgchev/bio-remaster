@@ -58,8 +58,8 @@ import StatsItem from "@components/stats/StatsItem.vue";
 
 <style scoped lang="scss">
 @use "sass:color";
-@use "@style/_variables.scss";
-@use "@style/_animations.scss";
+@use "@style/variables";
+@use "@style/animations";
 
 .projects-list-container {
   max-height: 400px;

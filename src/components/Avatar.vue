@@ -3,7 +3,7 @@
 </template>
 
 <style lang="scss" scoped>
-@use "@style/_variables.scss";
+@use "@style/variables";
 
 .avatar {
   width: 200px;

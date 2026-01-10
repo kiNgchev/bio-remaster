@@ -225,7 +225,7 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 @use "sass:color";
-@use "@style/_variables.scss";
+@use "@style/variables";
 
 .music-player {
   background: white;

@@ -164,8 +164,8 @@ watch(
 </template>
 
 <style lang="scss" scoped>
-@use "@style/_animations.scss";
-@use "@style/_variables.scss";
+@use "@style/animations";
+@use "@style/variables";
 .table-info {
   display: flex;
   align-items: center;

@@ -14,7 +14,7 @@ defineProps<{ source: string; label: string; url: string }>();
 </template>
 
 <style lang="scss" scoped>
-@use "@style/_variables.scss";
+@use "@style/variables";
 
 .shield {
   padding: 5px;

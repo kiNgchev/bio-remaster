@@ -44,6 +44,6 @@ import StatsItem from "@components/stats/StatsItem.vue";
 </template>
 
 <style scoped lang="scss">
-@use "@style/_animations.scss";
-@use "@style/_variables.scss";
+@use "@style/animations";
+@use "@style/variables";
 </style>

@@ -13,7 +13,7 @@ defineProps<{ source: string; name: string; url: string }>();
 </template>
 
 <style lang="scss" scoped>
-@use "@style/_variables.scss";
+@use "@style/variables";
 
 .social {
   width: 7vh;

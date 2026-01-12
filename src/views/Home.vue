@@ -203,6 +203,7 @@ watch(
   align-items: center;
   align-content: space-evenly;
   justify-content: space-evenly;
+  gap: 5px
 }
 
 .typed-cursor {

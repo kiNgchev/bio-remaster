@@ -16,8 +16,8 @@ defineProps<{ source: string; name: string; url: string }>();
 @use "@style/variables";
 
 .social {
-  width: 7vh;
-  height: 7vh;
+  width: 3em;
+  height: 3em;
 
   -webkit-user-drag: none;
   user-select: none;

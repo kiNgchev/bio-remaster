@@ -192,8 +192,8 @@ watch(
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  justify-items: center;
   align-content: space-evenly;
+  gap: 10px;
 }
 
 .technologies {
@@ -202,7 +202,6 @@ watch(
   flex-wrap: wrap;
   align-items: center;
   align-content: space-evenly;
-  justify-items: center;
   justify-content: space-evenly;
 }
 

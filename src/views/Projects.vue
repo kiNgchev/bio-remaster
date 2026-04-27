@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Card from "@components/Card.vue";
-import Navbar from "@components/Navbar.vue";
 import { projects } from "@/model/Projects.ts";
 import Project from "@components/Project.vue";
 import StatsContainer from "@components/stats/StatsContainer.vue";
@@ -8,7 +7,6 @@ import StatsItem from "@components/stats/StatsItem.vue";
 </script>
 
 <template>
-  <navbar />
   <main class="main">
     <section class="column">
       <card>

@@ -4,38 +4,52 @@ import { calculateAge } from "../utils/timeUtils.ts";
 import Card from "@components/Card.vue";
 import Shield from "@components/Shield.vue";
 import Typed from "typed.js";
-import { onMounted, ref, watch } from "vue";
+import { onMounted, watch } from "vue";
 import { useRoute } from "vue-router";
 
 import socials from "@assets/socials";
 import technologies from "@assets/technologies";
 
 import Social from "@components/Social.vue";
-import Navbar from "@components/Navbar.vue";
 import { useI18n } from "vue-i18n";
-import { getLocalizedBioText } from "@/i18n";
 
 const route = useRoute();
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 const age = calculateAge(7, 6, 2007);
-const typedElement = ref<HTMLElement | null>(null);
-let typedInstance: Typed | null = null;
+let typedInstances: Typed[] = [];
 
 const initTyped = () => {
-  if (typedElement.value) {
-    if (typedInstance) {
+  if (typedInstances.length !== 0) {
+    for (const typedInstance of typedInstances)
       typedInstance.destroy();
-    }
-
-    typedInstance = new Typed(typedElement.value, {
-      strings: [getLocalizedBioText(locale.value)],
-      typeSpeed: 10,
-      startDelay: 500,
-      showCursor: true,
-      cursorChar: "|",
-      contentType: "html"
-    });
   }
+
+  typedInstances.push(new Typed('#ageTyped', {
+    strings: [`${t("body.home.kingchev.age.field", { age: age })}, ${age}`],
+    typeSpeed: 10,
+    startDelay: 500,
+    showCursor: true,
+    cursorChar: "|",
+    contentType: "html"
+  }))
+
+  typedInstances.push(new Typed('#locationTyped', {
+    strings: [t("body.home.kingchev.location.field")],
+    typeSpeed: 10,
+    startDelay: 500,
+    showCursor: true,
+    cursorChar: "|",
+    contentType: "html"
+  }))
+
+  typedInstances.push(new Typed('#timezoneTyped', {
+    strings: [t("body.home.kingchev.timezone.field")],
+    typeSpeed: 10,
+    startDelay: 500,
+    showCursor: true,
+    cursorChar: "|",
+    contentType: "html"
+  }))
 };
 
 onMounted(() => {
@@ -66,7 +80,6 @@ watch(
 </script>
 
 <template>
-  <navbar />
   <main class="main">
     <section class="column">
       <card>
@@ -93,8 +106,7 @@ watch(
                 </td>
                 <td class="table-ceil">
                   <a>
-                    {{ $t("body.home.kingchev.age.field", { age: age }) }},
-                    {{ age }}
+                    <span id="ageTyped"></span>
                   </a>
                 </td>
               </tr>
@@ -109,7 +121,7 @@ watch(
                     href="https://yandex.ru/maps/geo/moskva/53166393/"
                     target="_blank"
                   >
-                    {{ $t("body.home.kingchev.location.field") }}
+                    <span id="locationTyped"></span>
                   </a>
                 </td>
               </tr>
@@ -121,7 +133,7 @@ watch(
                 </td>
                 <td class="table-ceil">
                   <a>
-                    {{ $t("body.home.kingchev.timezone.field") }}
+                    <span id="timezoneTyped"></span>
                   </a>
                 </td>
               </tr>
@@ -144,9 +156,7 @@ watch(
     <section class="column">
       <card class="bio-container">
         <h2>{{ $t("headers.home.bio") }}</h2>
-        <p>
-          <span ref="typedElement" id="type"></span>
-        </p>
+        <p v-html="$t('body.home.kingchev.bio')"></p>
       </card>
       <card>
         <h2>{{ $t("headers.home.mastered") }}</h2>

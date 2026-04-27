@@ -3,6 +3,20 @@
 @use "animations";
 @use "base";
 
+/* Animation classes for page transitions */
+.animated {
+  &.enter {
+    &-active-class {
+      animation: inherit;
+    }
+  }
+  &.leave {
+    &-active-class {
+      animation: inherit;
+    }
+  }
+}
+
 h1,
 h2,
 h3,
@@ -19,6 +33,7 @@ a {
   font-weight: 400;
   color: variables.$secondary-text;
   text-decoration: inherit;
+  cursor: pointer;
 }
 
 a:hover {
@@ -63,6 +78,7 @@ h1 {
 
 @media (max-width: 750px) and (max-height: 940px) {
   .main {
+    margin-top: 66.4px;
     height: 100%;
     display: flex;
     flex-direction: column;

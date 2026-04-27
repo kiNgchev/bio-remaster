@@ -26,4 +26,23 @@ const router = createRouter({
   routes
 });
 
+const order = ['Home', 'Projects', 'Music']
+function getRouteIndex(name:  string | symbol | undefined) {
+  return order.indexOf(String(name ?? 'Home'))
+}
+
+router.beforeEach((to, from) => {
+  const nextIndex = getRouteIndex(to.name)
+  const previousIndex = getRouteIndex(from.name)
+  
+  if (nextIndex === -1 || previousIndex === -1 || nextIndex === previousIndex) {
+    to.meta = { transition: 'slide-right' }
+    from.meta = { transition: 'slide-right' }
+    return
+  }
+  
+  to.meta = { transition: nextIndex > previousIndex ? 'slide-right' : 'slide-left' }
+  from.meta = { transition: nextIndex > previousIndex ? 'slide-right' : 'slide-left' }
+})
+
 export default router;

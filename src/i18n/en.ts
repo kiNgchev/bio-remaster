@@ -1,5 +1,5 @@
 import { convertToEn } from "@/utils/timeUtils.ts";
-import type { Scheme } from "@/i18n/index.ts";
+import { type Scheme } from "@/i18n/index.ts";
 
 export const en: Scheme = {
   headers: {
@@ -41,7 +41,8 @@ export const en: Scheme = {
         timezone: {
           header: "Timezone",
           field: "UTC+3, Moscow timezone"
-        }
+        },
+        bio: 'Heeeeey... Hello! I\'m a <a class=\'s\'>Kotlin</a>, <a>Go</a> &amp; <a>Rust</a> enjoyer. For more than three years, I have been programming bots, server apps, scripts, and SPA. I aim to become proficient in both <a>backend</a> and <a>frontend</a> development. Just a little DevOPS.<br> I love chess and cats! Und Ich lerne <a>Deutsch</a>!<br> You can order the program on my Telegram channel <a href=\"https://t.me/kingchev_works\">{\'@\'}kingchev_works</a><br> You may follow me in my socials, or send a message in DM. Good luck, reader :3'
       }
     },
     projects: {

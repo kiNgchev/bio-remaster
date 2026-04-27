@@ -75,6 +75,17 @@ const changeLocale = () => {
       padding: 5px 10px;
       border-radius: 5px;
       transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transition: variables.$scaling-time;
+        transform: scale(110%);
+      }
+
+      &:active {
+        transition: variables.$scaling-time;
+        transform: scale(110%);
+      }
     }
 
     .navbar-nav {

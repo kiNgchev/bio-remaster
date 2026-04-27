@@ -1,4 +1,4 @@
-import type { Scheme } from "@/i18n/index.ts";
+import { type Scheme } from "@/i18n/index.ts";
 import { convertToRu } from "@/utils/timeUtils.ts";
 
 export const ru: Scheme = {
@@ -41,7 +41,8 @@ export const ru: Scheme = {
         timezone: {
           header: "Часовой пояс",
           field: "UTC+3, Московский"
-        }
+        },
+        bio: 'Хееееей... Привет! Я <a>Kotlin</a>, <a>Go</a> &amp; <a>Rust</a> любитель. Более чем три года я пишу ботов, серверные приложения, скрипты и SPA. Я нацелен стать лучше в <a>backend</a> и <a>frontend</a> разработке. Чуть-чуть DevOps.<br> Я люблю шахматы и котиков! Und Ich lerne <a>Deutsch</a>!<br> Вы можете заказать что-нибудь в моём Telegram канале <a href=\"https://t.me/kingchev_works\">{\'@\'}kingchev_works</a><br> Вы можете подписаться на мои соц. сети или написать мне в личные сообщения. Удачи, читатель :3'
       }
     },
     projects: {

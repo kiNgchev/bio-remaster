@@ -74,6 +74,7 @@ export const ru: Scheme = {
   },
   projects: {
     sj: "Сервис, использующий механику Тиндера для поиска работы.",
+    linaribot: 'Телеграм бот сообщества <a target="_blank" href="https://t.me/linarime_chat">Лины</a>.',
     hisoka:
       'Мультифункциональный дискорд бот, стилизованный как Хисока Мороу из аниме <a target="_blank" href="https://en.wikipedia.org/wiki/Hunter_×_Hunter">Hunter x Hunter</a>. Бот написан на Kotlin.',
     akhs: "Совокупность сервисов для автоматизации различных задач, написана на Kotlin с использованием Spring Framework. Все сервисы связаны друг с другом с помощью Apache Kafka.",

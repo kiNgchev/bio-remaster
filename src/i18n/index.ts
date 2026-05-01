@@ -66,6 +66,7 @@ export type Scheme = {
   };
   projects: {
     sj: string;
+    linaribot: string;
     hisoka: string;
     akhs: string;
     reverse: string;

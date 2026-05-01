@@ -23,34 +23,41 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    name: "LinariBot",
+    description: "projects.linaribot",
+    source: "https://github.com/kiNgchev/linari-bot",
+    demo: "https://t.me/linarime_chat"
+  },
+  {
+    id: 4,
     name: "AKHS",
     description: "projects.akhs",
     source: "https://github.com/kiNgchev/AKHS",
     demo: null
   },
   {
-    id: 4,
+    id: 5,
     name: "Reverse Rewrite",
     description: "projects.reverse",
     source: "https://github.com/kiNgchev/ReverseRewrite",
     demo: "https://discord.com/oauth2/authorize?client_id=979745072843206686&permissions=8&integration_type=0&scope=bot"
   },
   {
-    id: 5,
+    id: 6,
     name: "Leetcode-rs",
     description: "projects.leetcode",
     source: "https://github.com/kiNgchev/leetcode-rs",
     demo: null
   },
   {
-    id: 6,
+    id: 7,
     name: "Bio",
     description: "projects.bio",
     source: "https://github.com/kiNgchev/bio-remaster",
     demo: "/"
   },
   {
-    id: 7,
+    id: 8,
     name: "Zenit VA",
     description: "projects.zenit",
     source: "https://github.com/kiNgchev/zenit-va",

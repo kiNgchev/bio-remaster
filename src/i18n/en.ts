@@ -74,6 +74,7 @@ export const en: Scheme = {
   },
   projects: {
     sj: "Service that uses Tinder-like mechanism for job hunting.",
+    linaribot: 'Telegram bot for <a target="_blank" href="https://t.me/linarime_chat">Linari</a> community.',
     hisoka:
       'Multifunctional Discord bot stylized as Hisoka Morrow from <a target="_blank" href="https://en.wikipedia.org/wiki/Hunter_×_Hunter">Hunter x Hunter</a>. Bot was written on Kotlin.',
     akhs: "Collection of services for automation tasks, written on Kotlin with Spring Framework. All services linked with each other with the help of Apache Kafka.",

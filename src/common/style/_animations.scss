@@ -7,6 +7,21 @@
   }
 }
 
+@keyframes pulse {
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 150%;
+  }
+
+  100% {
+    background-size: 100%;
+  }
+}
+
+
 @media (hover: hover) {
   .card:hover,
   .stat-item:hover {

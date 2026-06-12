@@ -25,6 +25,7 @@ import Navbar from "@components/Navbar.vue";
   max-width: 1280px;
   width: 100%;
   top: 0;
+  z-index: 1--;
 }
 
 .slide-left-enter-active,

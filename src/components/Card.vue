@@ -7,7 +7,7 @@
 </template>
 
 <style lang="scss" scoped>
-@use "@style/variables";
+@use "@style/vars";
 
 .card {
   display: flex;
@@ -17,6 +17,6 @@
   height: 100%;
   padding: 10px;
   background: white;
-  border-radius: variables.$border-radius;
+  border-radius: vars.$border-radius;
 }
 </style>

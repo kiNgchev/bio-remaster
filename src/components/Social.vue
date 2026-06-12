@@ -13,7 +13,7 @@ defineProps<{ source: string; name: string; url: string }>();
 </template>
 
 <style lang="scss" scoped>
-@use "@style/variables";
+@use "@style/vars";
 
 .social {
   width: 3em;
@@ -24,8 +24,8 @@ defineProps<{ source: string; name: string; url: string }>();
 
   text-align: center;
   padding: 5px;
-  border-radius: variables.$border-radius;
-  background-color: variables.$primary-bg;
+  border-radius: vars.$border-radius;
+  background-color: vars.$primary-bg;
 }
 
 .social-logo {

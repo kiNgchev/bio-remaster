@@ -1,4 +1,4 @@
-@use "variables";
+@use "vars";
 @use "fonts";
 @use "animations";
 @use "base";
@@ -26,18 +26,18 @@ h6,
 a,
 p {
   margin-top: 0;
-  color: variables.$text-primary-color;
+  color: vars.$text-primary-color;
 }
 
 a {
   font-weight: 400;
-  color: variables.$secondary-text;
+  color: vars.$secondary-text;
   text-decoration: inherit;
   cursor: pointer;
 }
 
 a:hover {
-  color: variables.$text-secondary-shadow-color;
+  color: vars.$text-secondary-shadow-color;
 }
 
 h1 {
@@ -59,7 +59,7 @@ h1 {
 .main {
   width: 100%;
   display: inline-flex;
-  gap: variables.$block-distance;
+  gap: vars.$block-distance;
 
   position: relative;
 
@@ -68,7 +68,7 @@ h1 {
 
 .column {
   display: flex;
-  gap: variables.$block-distance;
+  gap: vars.$block-distance;
   width: 100%;
   flex-direction: column;
   align-items: stretch;

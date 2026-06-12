@@ -14,12 +14,12 @@ defineProps<{ source: string; label: string; url: string }>();
 </template>
 
 <style lang="scss" scoped>
-@use "@style/variables";
+@use "@style/vars";
 
 .shield {
   padding: 5px;
   border-radius: 5px;
-  background-color: variables.$primary-bg;
+  background-color: vars.$primary-bg;
 }
 
 .shield-logo {
@@ -30,6 +30,6 @@ defineProps<{ source: string; label: string; url: string }>();
 .shield-label {
   margin-left: 5px;
   margin-right: 5px;
-  color: variables.$text-tertiary-color;
+  color: vars.$text-tertiary-color;
 }
 </style>

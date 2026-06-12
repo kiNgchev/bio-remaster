@@ -56,7 +56,7 @@ import StatsItem from "@components/stats/StatsItem.vue";
 
 <style scoped lang="scss">
 @use "sass:color";
-@use "@style/variables";
+@use "@style/vars";
 @use "@style/animations";
 
 .projects-list-container {
@@ -69,18 +69,18 @@ import StatsItem from "@components/stats/StatsItem.vue";
   }
 
   &::-webkit-scrollbar-thumb {
-    background: variables.$primary;
+    background: vars.$primary;
     border-radius: 10px;
     border: 2px solid #f1f1f1;
 
     &:hover {
-      background: color.adjust(variables.$primary, $lightness: -10%);
+      background: color.adjust(vars.$primary, $lightness: -10%);
     }
   }
 
   @-moz-document url-prefix() {
     scrollbar-width: thin;
-    scrollbar-color: variables.$primary white;
+    scrollbar-color: vars.$primary white;
     scrollbar-arrow-color: white;
   }
 }

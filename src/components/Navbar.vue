@@ -51,7 +51,7 @@ const changeLocale = () => {
 </template>
 
 <style lang="scss" scoped>
-@use "@style/variables";
+@use "@style/vars";
 
 .navbar {
   top: 0;
@@ -68,7 +68,7 @@ const changeLocale = () => {
 
     .locale-btn {
       position: relative;
-      color: variables.$text-tertiary-color;
+      color: vars.$text-tertiary-color;
       text-decoration: none;
       font-weight: 500;
       font-size: 1.1rem;
@@ -78,12 +78,12 @@ const changeLocale = () => {
       cursor: pointer;
 
       &:hover {
-        transition: variables.$scaling-time;
+        transition: vars.$scaling-time;
         transform: scale(110%);
       }
 
       &:active {
-        transition: variables.$scaling-time;
+        transition: vars.$scaling-time;
         transform: scale(110%);
       }
     }
@@ -105,7 +105,7 @@ const changeLocale = () => {
       }
 
       a {
-        color: variables.$text-tertiary-color;
+        color: vars.$text-tertiary-color;
         text-decoration: none;
         font-weight: 500;
         padding: 5px 10px;
@@ -113,27 +113,27 @@ const changeLocale = () => {
         transition: all 0.3s ease;
 
         &:hover {
-          transition: variables.$scaling-time;
+          transition: vars.$scaling-time;
           transform: scale(110%);
         }
 
         &:active {
-          transition: variables.$scaling-time;
+          transition: vars.$scaling-time;
           transform: scale(110%);
         }
 
         &.active {
           text-decoration: underline;
-          transition: variables.$scaling-time;
+          transition: vars.$scaling-time;
           transform: scale(115%);
 
           &:hover {
-            transition: variables.$scaling-time;
+            transition: vars.$scaling-time;
             transform: scale(100%);
           }
 
           &:active {
-            transition: variables.$scaling-time;
+            transition: vars.$scaling-time;
             transform: scale(100%);
           }
         }

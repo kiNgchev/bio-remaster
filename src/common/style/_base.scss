@@ -1,4 +1,4 @@
-@use "variables";
+@use "vars";
 @use "fonts";
 
 :root {
@@ -8,7 +8,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: variables.$primary-bg;
+  background: vars.$primary-bg;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,7 +22,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: variables.$primary-bg;
+  background: vars.$primary-bg;
 
   -webkit-user-drag: none;
   user-select: none;
@@ -33,5 +33,5 @@ h2 {
   font-size: 20px;
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: variables.$primary;
+  text-decoration-color: vars.$primary;
 }

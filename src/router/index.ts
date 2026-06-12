@@ -36,8 +36,8 @@ router.beforeEach((to, from) => {
   const previousIndex = getRouteIndex(from.name)
   
   if (nextIndex === -1 || previousIndex === -1 || nextIndex === previousIndex) {
-    to.meta = { transition: 'slide-right' }
-    from.meta = { transition: 'slide-right' }
+    to.meta = { transition: "slide-up" };
+    from.meta = { transition: 'slide-up' }
     return
   }
   

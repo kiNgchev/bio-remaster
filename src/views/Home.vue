@@ -175,7 +175,7 @@ watch(
 
 <style lang="scss" scoped>
 @use "@style/animations";
-@use "@style/variables";
+@use "@style/vars";
 .table-info {
   display: flex;
   align-items: center;
@@ -218,7 +218,7 @@ watch(
 
 .typed-cursor {
   font-size: 1rem;
-  color: variables.$secondary-text;
+  color: vars.$secondary-text;
   animation: blinking 0.7s infinite steps(1);
 }
 </style>

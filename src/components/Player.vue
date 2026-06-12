@@ -225,11 +225,11 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 @use "sass:color";
-@use "@style/variables";
+@use "@style/vars";
 
 .music-player {
   background: white;
-  border-radius: variables.$border-radius;
+  border-radius: vars.$border-radius;
   padding: 20px;
   width: 100%;
   margin: 0 auto;
@@ -252,24 +252,24 @@ onUnmounted(() => {
 
     @media (hover: hover) {
       &:hover {
-        transition: variables.$scaling-time;
-        transform: scale(variables.$scaling-percent-1);
+        transition: vars.$scaling-time;
+        transform: scale(vars.$scaling-percent-1);
       }
 
       &:not(:hover) {
-        transition: variables.$scaling-time;
+        transition: vars.$scaling-time;
         transform: scale(100%);
       }
     }
 
     @media (hover: none) {
       &:active {
-        transition: variables.$scaling-time;
-        transform: scale(variables.$scaling-percent-1);
+        transition: vars.$scaling-time;
+        transform: scale(vars.$scaling-percent-1);
       }
 
       &:not(:active) {
-        transition: variables.$scaling-time;
+        transition: vars.$scaling-time;
         transform: scale(100%);
       }
     }
@@ -281,7 +281,7 @@ onUnmounted(() => {
 
     .track-title {
       font-size: 1.2rem;
-      color: variables.$text-primary-color;
+      color: vars.$text-primary-color;
     }
 
     .track-artist {
@@ -300,7 +300,7 @@ onUnmounted(() => {
   .control-btn {
     background: none;
     border: none;
-    color: variables.$text-primary-color;
+    color: vars.$text-primary-color;
     cursor: pointer;
     padding: 8px;
     border-radius: 50%;
@@ -316,7 +316,7 @@ onUnmounted(() => {
   }
 
   .play-btn {
-    background: variables.$primary;
+    background: vars.$primary;
     border: none;
     color: white;
     cursor: pointer;
@@ -332,7 +332,7 @@ onUnmounted(() => {
 
     &:hover {
       background-color: color.adjust(
-        variables.$primary,
+        vars.$primary,
         $lightness: -10%
       );
     }
@@ -409,7 +409,7 @@ onUnmounted(() => {
       height: 16px;
       border: 0;
       border-radius: 50%;
-      background: variables.$primary;
+      background: vars.$primary;
       cursor: pointer;
     }
 
@@ -420,7 +420,7 @@ onUnmounted(() => {
       height: 16px;
       border: 0;
       border-radius: 50%;
-      background: variables.$primary;
+      background: vars.$primary;
       cursor: pointer;
     }
   }
@@ -447,10 +447,10 @@ onUnmounted(() => {
     }
 
     &.active {
-      background-color: variables.$accent;
+      background-color: vars.$accent;
 
       .playlist-item-title {
-        color: variables.$primary;
+        color: vars.$primary;
       }
     }
 
@@ -460,7 +460,7 @@ onUnmounted(() => {
       .playlist-item-title {
         margin: 0 0 3px 0;
         font-weight: 500;
-        color: variables.$text-primary-color;
+        color: vars.$text-primary-color;
       }
 
       .playlist-item-artist {

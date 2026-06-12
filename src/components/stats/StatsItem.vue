@@ -11,20 +11,20 @@ defineProps<{ header: string; description: string }>();
 
 <style scoped lang="scss">
 @use "sass:color";
-@use "@style/variables";
+@use "@style/vars";
 @use "@style/animations";
 
 .stat-item {
   text-align: center;
   padding: 15px;
-  border-radius: variables.$border-radius;
-  background-color: variables.$accent;
+  border-radius: vars.$border-radius;
+  background-color: vars.$accent;
   align-content: center;
 
   h3 {
     margin: 0;
     font-size: 1.8rem;
-    color: variables.$primary;
+    color: vars.$primary;
   }
 
   p {
@@ -33,7 +33,7 @@ defineProps<{ header: string; description: string }>();
   }
 
   &:hover {
-    background-color: color.adjust(variables.$secondary, $lightness: 15%);
+    background-color: color.adjust(vars.$secondary, $lightness: 15%);
   }
 }
 </style>

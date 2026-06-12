@@ -8,15 +8,18 @@ import Navbar from "@components/Navbar.vue";
   </div>
   <div class="main-container">
     <router-view v-slot="{ Component, route }">
-      <transition :name="route.meta.transition as string || 'fade'" mode="out-in">
-        <component :is="Component"/>
+      <transition
+        :name="(route.meta.transition as string) || 'fade'"
+        mode="out-in"
+        appear
+      >
+        <component :is="Component" />
       </transition>
     </router-view>
   </div>
 </template>
 
 <style lang="scss" scoped>
-
 .navbar-container {
   position: absolute;
   max-width: 1280px;
@@ -28,7 +31,7 @@ import Navbar from "@components/Navbar.vue";
 .slide-right-enter-active,
 .slide-left-leave-active,
 .slide-right-leave-active {
-  transition: all .15s linear;
+  transition: all 0.15s linear;
 }
 
 .slide-left-enter-from,
@@ -48,11 +51,12 @@ import Navbar from "@components/Navbar.vue";
 
 .slide-up-enter-active,
 .slide-up-leave-active {
-  transition: all .15s linear;
+  transition: all 0.15s linear;
 }
 
+.slide-up-enter-from,
 .slide-up-leave-to {
-  transform: translateY(-150%);
+  transform: translateY(150%);
 }
 
 .slide-up-enter-to {

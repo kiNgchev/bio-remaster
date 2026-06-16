@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="card">
+  <div class="card glass">
     <slot />
   </div>
 </template>
@@ -16,7 +16,6 @@
   gap: 10px;
   height: 100%;
   padding: 10px;
-  background: white;
   border-radius: vars.$border-radius;
 }
 </style>

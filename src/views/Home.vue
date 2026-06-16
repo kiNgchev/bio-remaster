@@ -201,8 +201,8 @@ watch(
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   align-content: space-evenly;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -212,7 +212,7 @@ watch(
   flex-wrap: wrap;
   align-items: center;
   align-content: space-evenly;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 5px
 }
 

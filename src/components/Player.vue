@@ -228,7 +228,6 @@ onUnmounted(() => {
 @use "@style/vars";
 
 .music-player {
-  background: white;
   border-radius: vars.$border-radius;
   padding: 20px;
   width: 100%;
@@ -281,11 +280,11 @@ onUnmounted(() => {
 
     .track-title {
       font-size: 1.2rem;
-      color: vars.$text-primary-color;
+      color: vars.$secondary-text;
     }
 
     .track-artist {
-      color: #666;
+      color: vars.$text-tertiary-color;
       font-size: 0.9rem;
     }
   }
@@ -300,7 +299,7 @@ onUnmounted(() => {
   .control-btn {
     background: none;
     border: none;
-    color: vars.$text-primary-color;
+    color: vars.$text-tertiary-color;
     cursor: pointer;
     padding: 8px;
     border-radius: 50%;
@@ -316,7 +315,7 @@ onUnmounted(() => {
   }
 
   .play-btn {
-    background: vars.$primary;
+    background: vars.$tertiary;
     border: none;
     color: white;
     cursor: pointer;
@@ -331,10 +330,7 @@ onUnmounted(() => {
     position: relative;
 
     &:hover {
-      background-color: color.adjust(
-        vars.$primary,
-        $lightness: -10%
-      );
+      background-color: color.adjust(vars.$tertiary, $lightness: -10%);
     }
 
     &[disabled] {
@@ -386,7 +382,7 @@ onUnmounted(() => {
 
   .time {
     font-size: 0.8rem;
-    color: #666;
+    color: vars.$text-tertiary-color;
     min-width: 40px;
   }
 
@@ -409,7 +405,7 @@ onUnmounted(() => {
       height: 16px;
       border: 0;
       border-radius: 50%;
-      background: vars.$primary;
+      background: vars.$tertiary;
       cursor: pointer;
     }
 
@@ -420,7 +416,7 @@ onUnmounted(() => {
       height: 16px;
       border: 0;
       border-radius: 50%;
-      background: vars.$primary;
+      background: vars.$tertiary;
       cursor: pointer;
     }
   }
@@ -428,8 +424,12 @@ onUnmounted(() => {
 
 .playlist {
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
   gap: 10px;
   justify-content: space-between;
 
@@ -443,14 +443,14 @@ onUnmounted(() => {
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: #f5f5f5;
+      background-color: color.adjust(vars.$tertiary-bg, $lightness: 15%);
     }
 
     &.active {
-      background-color: vars.$accent;
+      background-color: vars.$tertiary-bg;
 
       .playlist-item-title {
-        color: vars.$primary;
+        color: vars.$tertiary;
       }
     }
 
@@ -460,25 +460,33 @@ onUnmounted(() => {
       .playlist-item-title {
         margin: 0 0 3px 0;
         font-weight: 500;
-        color: vars.$text-primary-color;
+        color: vars.$secondary-text;
       }
 
       .playlist-item-artist {
         margin: 0;
         font-size: 0.8rem;
-        color: #666;
+        color: vars.$text-tertiary-color;
       }
     }
 
     .playlist-item-position {
       font-size: 1rem;
-      color: #666;
+      color: vars.$text-tertiary-color;
     }
 
     .playlist-item-duration {
       font-size: 0.8rem;
-      color: #666;
+      color: vars.$text-tertiary-color;
     }
+  }
+}
+
+@media (max-width: 750px) {
+  .playlist {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
   }
 }
 </style>

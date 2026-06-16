@@ -6,10 +6,11 @@ defineProps<{ source: string; label: string; url: string }>();
   <a
     :href="url"
     target="_blank"
-    class="shield flex wrap-normal justify-evenly content-center"
   >
-    <img :src="source" alt="kingchev" class="shield-logo m-auto" />
-    <p class="shield-label self-center">{{ label }}</p>
+    <div class="shield glass flex wrap-normal justify-evenly content-center">
+      <img :src="source" alt="kingchev" class="shield-logo m-auto" />
+      <p class="shield-label self-center">{{ label }}</p>
+    </div>
   </a>
 </template>
 
@@ -19,7 +20,7 @@ defineProps<{ source: string; label: string; url: string }>();
 .shield {
   padding: 5px;
   border-radius: 5px;
-  background-color: vars.$primary-bg;
+  background: vars.$tertiary-bg;
 }
 
 .shield-logo {

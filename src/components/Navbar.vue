@@ -7,16 +7,15 @@ const route = useRoute();
 const { locale, availableLocales } = useI18n();
 
 const navigateTo = (path: string) => {
-  if (route.path === path) return router.push("/");
+  if (route.path === "/home" && route.path === path) return router.push("/");
+  if (route.path === path) return router.push("/home");
   router.push(path);
 };
-
 
 const changeLocale = () => {
   let index = availableLocales.indexOf(locale.value) + 1;
 
-  if (index > availableLocales.length - 1)
-    index = 0;
+  if (index > availableLocales.length - 1) index = 0;
 
   locale.value = availableLocales[index];
 };
@@ -28,8 +27,8 @@ const changeLocale = () => {
       <a v-on:click="changeLocale" class="locale-btn">{{ locale }}</a>
       <nav class="navbar-nav">
         <a
-          @click="navigateTo('/')"
-          :class="{ active: route.path === '/' }"
+          @click="navigateTo('/home')"
+          :class="{ active: route.path === '/home' }"
           class="nav-link"
           >Home</a
         >
@@ -56,6 +55,7 @@ const changeLocale = () => {
 .navbar {
   top: 0;
   z-index: 100;
+  border-radius: 0 0 10px 10px;
 
   .navbar-container {
     display: flex;

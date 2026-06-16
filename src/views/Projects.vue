@@ -22,7 +22,7 @@ import StatsItem from "@components/stats/StatsItem.vue";
             :description="$t('body.projects.stats.completed')"
           />
           <stats-item
-            header="3+"
+            header="4+"
             :description="$t('body.projects.stats.years')"
           />
           <stats-item
@@ -30,7 +30,7 @@ import StatsItem from "@components/stats/StatsItem.vue";
             :description="$t('body.projects.stats.contributions')"
           />
           <stats-item
-            header="2"
+            header="3"
             :description="$t('body.projects.stats.clients')"
           />
         </stats-container>

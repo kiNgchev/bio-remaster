@@ -13,7 +13,7 @@ defineProps<{
     <p v-html="$t(description)"></p>
     <div class="project-links">
       <a v-if="source" target="_blank" :href="source">GitHub</a>
-      |
+      <p v-if="source && demo">|</p>
       <a v-if="demo" target="_blank" :href="demo">{{
         $t("body.projects.projects.demo")
       }}</a>
@@ -23,7 +23,8 @@ defineProps<{
 
 <style scoped lang="scss">
 .project-item {
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 15px;
   padding-bottom: 15px;
 
   h3 {
@@ -37,6 +38,10 @@ defineProps<{
 }
 
 .project-links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
   margin-top: 10px;
 
   a {

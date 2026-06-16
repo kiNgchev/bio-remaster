@@ -1,22 +1,28 @@
 <script setup lang="ts">
 import Navbar from "@components/Navbar.vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
 </script>
 
 <template>
-  <div class="navbar-container">
-    <navbar />
-  </div>
-  <div class="main-container">
-    <router-view v-slot="{ Component, route }">
-      <transition
-        :name="(route.meta.transition as string) || 'fade'"
-        mode="out-in"
-        appear
-      >
-        <component :is="Component" />
-      </transition>
-    </router-view>
-  </div>
+    <transition name="slide-down" mode="out-in" appear>
+      <div v-if="route.name != 'Startup'" class="navbar-container">
+        <navbar />
+      </div>
+    </transition>
+
+    <div class="main-container">
+      <router-view v-slot="{ Component, route }">
+        <transition
+          :name="(route.meta.transition as string) || 'slide-up'"
+          mode="out-in"
+          appear
+        >
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -25,42 +31,10 @@ import Navbar from "@components/Navbar.vue";
   max-width: 1280px;
   width: 100%;
   top: 0;
-  z-index: 1--;
+  z-index: 1;
 }
 
-.slide-left-enter-active,
-.slide-right-enter-active,
-.slide-left-leave-active,
-.slide-right-leave-active {
-  transition: all 0.15s linear;
-}
-
-.slide-left-enter-from,
-.slide-right-leave-to {
-  transform: translateX(-150%);
-}
-
-.slide-right-enter-from,
-.slide-left-leave-to {
-  transform: translateX(150%);
-}
-
-.slide-right-enter-to,
-.slide-left-enter-to {
-  transform: translateX(0);
-}
-
-.slide-up-enter-active,
-.slide-up-leave-active {
-  transition: all 0.15s linear;
-}
-
-.slide-up-enter-from,
-.slide-up-leave-to {
-  transform: translateY(150%);
-}
-
-.slide-up-enter-to {
-  transform: translateY(0);
+.main-container {
+  padding: 10px;
 }
 </style>

@@ -3,12 +3,10 @@ defineProps<{ source: string; name: string; url: string }>();
 </script>
 
 <template>
-  <a
-    :href="url"
-    target="_blank"
-    class="social flex wrap-normal justify-evenly content-center"
-  >
-    <img :src="source" :alt="`kingchev ${name}`" class="social-logo m-auto" />
+  <a :href="url" target="_blank">
+    <div class="social flex wrap-normal justify-evenly content-center">
+      <img :src="source" :alt="`kingchev ${name}`" class="social-logo m-auto" />
+    </div>
   </a>
 </template>
 
@@ -25,7 +23,7 @@ defineProps<{ source: string; name: string; url: string }>();
   text-align: center;
   padding: 5px;
   border-radius: vars.$border-radius;
-  background-color: vars.$primary-bg;
+  background: vars.$tertiary-bg;
 }
 
 .social-logo {

@@ -5,6 +5,8 @@ import swss from "@assets/music/source/shinzou_wo_sasageyo.mp3";
 import swsc from "@assets/music/covers/shinzou_wo_sasageyo.png";
 import ds from "@assets/music/source/discord.mp3";
 import dc from "@assets/music/covers/discord.png";
+import bs from "@assets/music/source/bike.mp3"
+import bc from "@assets/music/covers/bike.png"
 
 const music: Track[] = [
   {
@@ -31,6 +33,15 @@ const music: Track[] = [
     src: ds,
     cover: dc,
     duration: 196
+  },
+  {
+    id: "4",
+    title: "Bike",
+    artist: "Tanger",
+
+    src: bs,
+    cover: bc,
+    duration: 69
   }
 ];
 

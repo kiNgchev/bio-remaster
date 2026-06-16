@@ -3,7 +3,7 @@ defineProps<{ header: string; description: string }>();
 </script>
 
 <template>
-  <div class="stat-item">
+  <div class="stat-item glass">
     <h3>{{ header }}</h3>
     <p>{{ description }}</p>
   </div>
@@ -18,13 +18,13 @@ defineProps<{ header: string; description: string }>();
   text-align: center;
   padding: 15px;
   border-radius: vars.$border-radius;
-  background-color: vars.$accent;
+  background-color: vars.$tertiary-bg;
   align-content: center;
 
   h3 {
     margin: 0;
     font-size: 1.8rem;
-    color: vars.$primary;
+    color: vars.$secondary-text;
   }
 
   p {

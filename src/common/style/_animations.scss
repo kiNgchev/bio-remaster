@@ -7,7 +7,7 @@
   }
 }
 
-@keyframes pulse {
+@keyframes pulse-background {
   0% {
     background-size: 100%;
   }
@@ -21,6 +21,19 @@
   }
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 
 @media (hover: hover) {
   .card:hover,
@@ -88,4 +101,59 @@
   .shield:not(:active) {
     background-color: color.adjust(vars.$primary, $lightness: 0%);
   }
+}
+
+.slide-left-enter-active,
+.slide-right-enter-active,
+.slide-left-leave-active,
+.slide-right-leave-active {
+  transition: all 0.3s linear;
+}
+
+.slide-left-enter-from,
+.slide-right-leave-to {
+  background-size: 150%;
+  transform: translateX(-150%);
+}
+
+.slide-right-enter-from,
+.slide-left-leave-to {
+  background-size: 150%;
+  transform: translateX(150%);
+}
+
+.slide-right-enter-to,
+.slide-left-enter-to {
+  background-size: 100%;
+  transform: translateX(0);
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.3s linear;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  background-size: 150%;
+  transform: translateY(150%);
+}
+
+.slide-up-enter-to {
+  background-size: 100%;
+  transform: translateY(0);
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 0.3s linear;
+}
+
+.slide-down-enter-from,
+.slide-down-leave-to {
+  transform: translateY(-200%);
+}
+
+.slide-down-enter-to {
+  transform: translateY(0);
 }

@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@views/Home.vue";
 import Projects from "../views/Projects.vue";
-import Music from "../views/Music.vue";
+import Startup from "@views/Startup.vue";
+import Music from "@views/Music.vue";
 
 const routes = [
   {
     path: "/",
+    name: "Startup",
+    component: Startup
+  },
+  {
+    path: "/home",
     name: "Home",
     component: Home
   },
@@ -28,6 +34,8 @@ const router = createRouter({
 
 const order = ['Home', 'Projects', 'Music']
 function getRouteIndex(name:  string | symbol | undefined) {
+  if (name === "Startup")
+    return -1
   return order.indexOf(String(name ?? 'Home'))
 }
 

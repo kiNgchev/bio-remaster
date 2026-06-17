@@ -62,7 +62,7 @@ body {
 .glass::before, body::before {
   content: "";
 
-  background-image: url("/light.png");
+  background-image: url("@assets/light.png");
   background-repeat: repeat;
   background-size: 750px;
 
